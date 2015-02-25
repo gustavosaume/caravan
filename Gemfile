@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'bundler', '~> 1.8.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -8,19 +8,21 @@ gem 'mongoid', '~> 4.0.2'
 gem 'haml-rails', '~> 0.8.2'
 gem 'sass-rails', '~> 5.0'
 gem 'compass-rails', '~> 2.0.4'
+gem 'breakpoint', '~> 2.5.0'
 gem 'susy', '~> 2.2.2'
 gem 'uglifier', '>= 1.3.0'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-ractive'
+  gem 'rails-assets-ractive-events-tap'
+end
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-# Use jquery as the JavaScript library
 gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
