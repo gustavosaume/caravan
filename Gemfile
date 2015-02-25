@@ -7,6 +7,8 @@ gem 'mongoid', '~> 4.0.2'
 
 gem 'haml-rails', '~> 0.8.2'
 gem 'sass-rails', '~> 5.0'
+gem 'compass-rails', '~> 2.0.4'
+gem 'susy', '~> 2.2.2'
 gem 'uglifier', '>= 1.3.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
