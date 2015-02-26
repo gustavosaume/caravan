@@ -3,6 +3,7 @@ gem 'bundler', '~> 1.8.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
+gem 'rails_12factor'
 gem 'mongoid', '~> 4.0.2'
 
 gem 'haml-rails', '~> 0.8.2'
