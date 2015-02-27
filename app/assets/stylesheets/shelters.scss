@@ -3,14 +3,66 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import "breakpoint";
+@import "susy";
+@import "variables";
+@import "compass/typography";
+@import "compass/css3/border-radius";
+@import "compass/typography/vertical_rhythm";
+@import 'modular-scale';
 
-$background: #BADA55;
-$basic: 543px;
 
-body {
-  background: $background;
+.toolbar {
+  background-color: black;
+  color: $contrast-font-color;
+  @include inline-block-list;
 
-  @include breakpoint($basic) {
-    content: 'Basic Media Query';
+  > .toolbarItem {
+    cursor: pointer;
+    text-align: center;
+    @include span(4 of 12);
+
+    &.sorted {
+      background-color: #BDBDBD;
+      color: $base-font-color;
+    }
+  }
+}
+
+.shelter-item {
+  padding: rhythm(1);
+  margin: rhythm(1);
+  border: 1px solid black;
+  position: relative;
+
+  @include border-radius(6px);
+
+  > .action-link {
+    display: block;
+    text-align: center;
+    border-top: 1px solid black;
+
+    margin: 0 (rhythm(1) * -1);
+
+    &:last-child {
+      margin-bottom: (rhythm(1) * -1);
+    }
+  }
+
+  > h1 {
+    @include span(11 of 12);
+  }
+
+  > .rating {
+    text-align: right;
+    @include span(1 of 12);
+  }
+}
+
+.rating {
+  position: relative;
+
+  &:after {
+    content: "stars";
+    @include adjust-font-size-to(ms(-2));
   }
 }
