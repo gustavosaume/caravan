@@ -1,14 +1,12 @@
-// Place all the styles related to the shelters controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-@import "breakpoint";
-@import "susy";
-@import "variables";
+@import "compass/reset";
+@import "compass/css3";
 @import "compass/typography";
 @import "compass/css3/border-radius";
 @import "compass/typography/vertical_rhythm";
-@import 'modular-scale';
+@import "breakpoint";
+@import "susy";
+@import "variables";
+@import 'fonts';
 
 
 .toolbar {
@@ -43,6 +41,11 @@
 
     margin: 0 (rhythm(1) * -1);
 
+    &:hover {
+      color: $contrast-font-color;
+      background-color: black;
+    }
+
     &:last-child {
       margin-bottom: (rhythm(1) * -1);
     }
@@ -62,7 +65,7 @@
   position: relative;
 
   &:after {
-    content: "stars";
-    @include adjust-font-size-to(ms(-2));
+    content: "of 10";
+    @include typeSize(tiny);
   }
 }

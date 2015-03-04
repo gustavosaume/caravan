@@ -1,4 +1,16 @@
-%p#notice= notice
-= link_to 'Edit', edit_shelter_path(@shelter)
-|
-= link_to 'Back', shelters_path
+- content_for :head do
+  %script{src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyB21xESS5tCZO5TLxjnLHFz7uQCBiq0fjw"}
+  = javascript_include_tag "shelter"
+  = stylesheet_link_tag "shelter"
+
+
+%h1 #{@shelter.name}
+%p #{@shelter.description}
+#shelter-map{data: {center: {lat: @shelter.location[0], lng: @shelter.location[1]}}}
+
+%button#reserve-button.main-button.full-button Reserve <em>(10 beds available)</em>
+%button#waitlist-button.second-button.full-button Join the waitlist
+/ %p#notice= notice
+/ = link_to 'Edit', edit_shelter_path(@shelter)
+/ |
+/ = link_to 'Back', shelters_path

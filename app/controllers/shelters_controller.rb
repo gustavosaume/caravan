@@ -10,6 +10,7 @@ class SheltersController < ApplicationController
   # GET /shelters/1
   # GET /shelters/1.json
   def show
+    @shelter = Shelter.find(params[:id])
   end
 
   # GET /shelters/new

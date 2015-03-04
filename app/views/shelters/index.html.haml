@@ -1,3 +1,7 @@
+- content_for :head do
+  = javascript_include_tag "shelters"
+  = stylesheet_link_tag "shelters"
+
 #shelter-list-filter
 #shelter-list-container{data: {shelters: @shelters.map(&:to_hash).to_json}}
 

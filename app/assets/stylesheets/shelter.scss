@@ -1,0 +1,33 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/typography";
+@import "compass/css3/border-radius";
+@import "compass/typography/vertical_rhythm";
+@import "breakpoint";
+@import "susy";
+@import "variables";
+@import 'fonts';
+
+#shelter-map {
+  width: 100%;
+  height: 400px;
+}
+
+.full-button {
+  width: 100%;
+  height: 50px;
+  display: block;
+  margin: 10px;
+  
+  border: none;
+  background-color: black;
+  
+  color: $contrast-font-color;
+  
+  @include typeSize(medium);
+
+  > em {
+    font-style: italic;
+    @include typeSize(small);
+  }
+}
