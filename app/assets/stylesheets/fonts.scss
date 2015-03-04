@@ -13,6 +13,27 @@ $base-font-color: #303033;
 
 @include establish-baseline;
 
+@mixin typeSize($size) {
+ @if $size == "tiny" {
+  @include adjust-font-size-to(ms(-2));
+ }
+ @if $size == "small" {
+  @include adjust-font-size-to(ms(-1));
+ }
+ @if $size == "base" {
+  @include adjust-font-size-to(ms(0));
+ }
+ @if $size == "medium" {
+  @include adjust-font-size-to(ms(1));
+ }
+ @if $size == "large" {
+  @include adjust-font-size-to(ms(2));
+ }
+ @if $size == "xlarge" {
+  @include adjust-font-size-to(ms(3));
+ }
+}
+
 body{ 
   font-size: ms(0); 
   font-family: $base-font-family;
@@ -20,6 +41,6 @@ body{
   color: $base-font-color;
 }
 
-h3{ @include adjust-font-size-to(ms(1)); }
-h2{ @include adjust-font-size-to(ms(1)); }
-h1{ @include adjust-font-size-to(ms(2)); }
+h3{ @include typeSize(medium); }
+h2{ @include typeSize(medium); }
+h1{ @include typeSize(large); }
