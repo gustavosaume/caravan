@@ -1,5 +1,5 @@
 #shelter-list-filter
-#shelter-list-container
+#shelter-list-container{data: {shelters: @shelters.map(&:to_hash).to_json}}
 
 %script#template-shelters-filter{type: :ractive}
   %ul.toolbar
@@ -31,8 +31,8 @@
     %h2.rating {{rating}}
     %h2 {{distance}} miles away
     %p {{description}}
-    %a.action-link{href: 'shelters/{{id}}'} More Info
-    %a.action-link{href: 'shelters/{{id}}/reserve'} Reserve
+    %a.action-link{href: '/shelters/{{id}}'} More Info
+    %a.action-link{href: '/shelters/{{id}}/reserve'} Reserve
   <!-- {{/shelter}} -->
 
 / %p#notice= notice
@@ -49,3 +49,4 @@
 /         %td= link_to 'Destroy', shelter, method: :delete, data: { confirm: 'Are you sure?' }
 / %br/
 / = link_to 'New Shelter', new_shelter_path
+ 

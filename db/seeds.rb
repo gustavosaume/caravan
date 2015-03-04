@@ -5,3 +5,21 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'yaml'
+
+Mongoid.purge!
+
+shelters = YAML.load_file('db/data/shelters.yaml')
+shelters.each do |json_shelter|
+  json_shelter.symbolize_keys!
+  shelter = Shelter.create(
+    name:        json_shelter[:name],
+    description: json_shelter[:description],
+    rating:      json_shelter[:rating],
+    location:    json_shelter[:location])
+  shelter.save
+end
+
+Shelter.all.each do |shelter|
+  puts "#{shelter.name}: #{shelter.rating}  at #{shelter.location}"
+end
