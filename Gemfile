@@ -13,6 +13,7 @@ gem 'modular-scale', '~> 2.0.6'
 gem 'breakpoint', '~> 2.5.0'
 gem 'susy', '~> 2.2.2'
 gem 'uglifier', '>= 1.3.0'
+gem 'font-awesome-rails', '~> 4.3.0.0'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-ractive'
