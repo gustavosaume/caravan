@@ -5,6 +5,7 @@ gem 'bundler', '~> 1.8.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 gem 'mongoid', '~> 4.0.2'
+gem 'faker', '~> 1.4.3'
 
 gem 'haml-rails', '~> 0.8.2'
 gem 'sass-rails', '~> 5.0'
@@ -49,4 +50,3 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-

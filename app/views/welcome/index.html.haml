@@ -1,0 +1,17 @@
+- content_for :head do
+  = stylesheet_link_tag "welcome", media: 'all'
+
+.hero
+  %h1 Welcome!
+  %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu
+  = link_to 'Find shelters nearby', { controller: 'shelters', action: 'index' }, class: 'button main-button full-button'
+
+%ul#testimonials.small-list
+  - @testimonials.each do |t|
+    %li.list-item
+      %blockquote
+        %h1= t[:shelter][:name]
+        = t[:comment]
+        %footer
+          %cite= t[:author_name]
+      

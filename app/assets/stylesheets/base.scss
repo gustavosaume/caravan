@@ -1,0 +1,42 @@
+@import "variables";
+@import "fonts";
+
+blockquote {
+  font-style: italic;
+
+  h1 {
+    font-weight: 800;
+    @include typeSize(base);
+  }
+
+  cite:before {
+    content: "\2014 \2009";
+  }
+}
+
+.button {
+  display: inline-block;
+  margin-top: 10px; 
+}
+
+.main-button {
+  @extend .button;
+
+  color: $contrast-font-color;
+  background-color: black;
+}
+
+.full-button {
+  @extend .button;
+
+  width: 100%;
+  display: block;
+
+  padding: 10px;
+}
+
+.big-button {
+  @extend .button;
+
+  @include typeSize(large);
+}

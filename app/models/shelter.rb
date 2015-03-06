@@ -6,6 +6,9 @@ class Shelter
   field :rating, type: Float
   field :location, type: Array
 
+  has_many :testimonials
+  
+
   index({ location: "2d"}, { min: -200, max: 200 })
 
   def to_hash
