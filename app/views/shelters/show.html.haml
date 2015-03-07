@@ -1,7 +1,7 @@
 - content_for :head do
-  %script{src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyB21xESS5tCZO5TLxjnLHFz7uQCBiq0fjw"}
-  = javascript_include_tag "shelter"
   = stylesheet_link_tag "shelter", media: 'all'
+  = javascript_include_tag "shelter"
+  %script{src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyB21xESS5tCZO5TLxjnLHFz7uQCBiq0fjw"}
 
 
 %h1 #{@shelter.name}
