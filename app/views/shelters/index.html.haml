@@ -1,7 +1,10 @@
 - content_for :head do
-  = javascript_include_tag "shelters"
   = stylesheet_link_tag "shelters", media: 'all'
+  = javascript_include_tag "shelters"
+  %script{src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyB21xESS5tCZO5TLxjnLHFz7uQCBiq0fjw"}
 
+
+#shelter-list-map
 #shelter-list-filter
 #shelter-list-container{data: {shelters: @shelters.map(&:to_hash).to_json}}
 

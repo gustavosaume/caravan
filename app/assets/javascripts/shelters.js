@@ -39,4 +39,18 @@ $(document).ready(function () {
     this.set('sortColumn', column);
     racShelters.set('sortColumn', column);
   });
+
+  // add map
+  var map = new google.maps.Map($("#shelter-list-map")[0]);
+  var bounds = new google.maps.LatLngBounds();
+  shelters.forEach(function(shelter) {
+    var latLng = new google.maps.LatLng(shelter["location"][0], shelter["location"][1]);
+    var marker = new google.maps.Marker({
+      animation: google.maps.Animation.DROP,
+      position: latLng,
+      map: map
+    });
+    bounds.extend(latLng);
+  });
+  map.fitBounds(bounds);
 });
