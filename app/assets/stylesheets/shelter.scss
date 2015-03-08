@@ -6,7 +6,32 @@
 @import "breakpoint";
 @import "susy";
 @import "variables";
-@import 'fonts';
+@import "fonts";
+@import "components";
+
+
+.reviews {
+  text-align: right;
+  margin: 10px 0;
+}
+
+.rating {
+  display: block;
+  text-align: right;
+  height: 35px;
+  float: none;
+}
+
+.flag {
+  color: red;
+}
+
+.flag:before {
+  content: "\f024";
+  font-family: FontAwesome;
+  padding-right: 0.5em;
+  text-decoration: none;
+}
 
 #shelter-map {
   width: 100%;

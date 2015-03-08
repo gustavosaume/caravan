@@ -4,7 +4,10 @@
   %script{src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyB21xESS5tCZO5TLxjnLHFz7uQCBiq0fjw"}
 
 
-%h1 #{@shelter.name}
+%h1.big-name #{@shelter.name}
+.reviews
+  #rating.rating{data: {rating: @shelter.rating}}
+  %a.flag{href: "#report"} Report a problem
 %p #{@shelter.description}
 #shelter-map{data: {center: {lat: @shelter.location[0], lng: @shelter.location[1]}}}
 

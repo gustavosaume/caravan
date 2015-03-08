@@ -1,3 +1,5 @@
+//= require components
+
 $(document).ready(function() {
   var shelterLocation = new google.maps.LatLng($("#shelter-map").data("center-lat"), $("#shelter-map").data("center-lng"))
   var mapOptions = {
@@ -9,5 +11,14 @@ $(document).ready(function() {
     animation: google.maps.Animation.DROP,
     position: shelterLocation,
     map: map,
+  });
+
+
+  var rating = new StarRating({
+    el: "#rating",
+    data: {
+      id: "first",
+      rating: $("#rating").data("rating"),
+    }
   });
 });
