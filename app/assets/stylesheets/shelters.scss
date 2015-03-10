@@ -7,6 +7,7 @@
 @import "susy";
 @import "variables";
 @import 'fonts';
+@import "components";
 
 
 .toolbar {
@@ -49,24 +50,6 @@
     &:last-child {
       margin-bottom: (rhythm(1) * -1);
     }
-  }
-
-  > h1 {
-    @include span(11 of 12);
-  }
-
-  > .rating {
-    text-align: right;
-    @include span(1 of 12);
-  }
-}
-
-.rating {
-  position: relative;
-
-  &:after {
-    content: "of 10";
-    @include typeSize(tiny);
   }
 }
 

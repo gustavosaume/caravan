@@ -35,8 +35,7 @@
   <!-- {{>shelter}} -->
   %li.shelter-item
     %h1 {{name}}
-    %h2.rating {{rating}}
-    %h2 {{distance}} miles away
+    %starRating{id: '{{id}}', rating: '{{rating}}', isEnabled: 'false', name: '{{name}}'}
     %p {{description}}
     %a.action-link{href: '/shelters/{{id}}'} More Info
     %a.action-link{href: '/shelters/{{id}}/reserve'} Reserve

@@ -1,11 +1,9 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+//= require components
 
 $(document).ready(function () {
 
   var ShelterList = Ractive.extend({
-    template: "#template-shelters",
-    init: function(options) {}
+    template: "#template-shelters"
   });
 
   var shelters = $("#shelter-list-container").data("shelters");
