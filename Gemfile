@@ -17,7 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'font-awesome-rails', '~> 4.3.0.0'
 
 source 'https://rails-assets.org' do
-  gem 'rails-assets-ractive'
+  gem 'rails-assets-ractive', '~> 0.6.0'
   gem 'rails-assets-ractive-events-tap'
 end
 
