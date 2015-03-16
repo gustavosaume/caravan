@@ -11,8 +11,20 @@
 %p #{@shelter.description}
 #shelter-map{data: {center: {lat: @shelter.location[0], lng: @shelter.location[1]}}}
 
-%button#reserve-button.main-button.full-button Reserve <em>(10 beds available)</em>
-%button#waitlist-button.second-button.full-button Join the waitlist
+%ul#testimonials.small-list
+  - @shelter.testimonials.each do |t|
+    %li.list-item
+      .vote-info
+        %button.vote-button.up
+          %i.fa.fa-arrow-up
+          #{rand(100)}
+        %button.vote-button.down
+          %i.fa.fa-arrow-down
+          #{rand(100)}
+      %blockquote.testimonial
+        = t[:comment]
+        %footer
+          %cite= t[:author_name]
 / %p#notice= notice
 / = link_to 'Edit', edit_shelter_path(@shelter)
 / |

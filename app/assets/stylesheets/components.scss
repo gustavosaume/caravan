@@ -1,3 +1,26 @@
+/****** Layout components *****/
+.hero {
+  background-color: lightgrey;
+  margin: 10px;
+  padding: 28px;
+
+  text-align: center;
+}
+
+.small-list {
+  list-style: none;
+  margin-left: 0;
+  vertical-align: middle;
+
+  .list-item {
+    margin-bottom: 10px;
+    padding: 10px 36px;
+    background-color: whitesmoke;
+  }
+}
+
+
+
 /****** Style Star Rating Widget *****/
 .rating { 
   border: none;

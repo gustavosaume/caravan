@@ -8,7 +8,7 @@ class Testimonial
   belongs_to :shelter
 
 
-  index c_at: -1
+  index c_at: 1
 
   def to_hash
     shelter = Shelter.find(self.shelter_id)

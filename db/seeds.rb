@@ -20,14 +20,21 @@ shelters.each do |json_shelter|
   shelter.save
 end
 
+puts "#{shelters.count} shelters created."
+puts ""
+
 Shelter.all.each do |shelter|
-  [0..rand(10)].each do |i|
+  puts "#{shelter.name}: #{shelter.rating}  at #{shelter.location}"
+  puts "  Testimonials:"
+  (0..rand(10)).each do |i|
     testimonial = Testimonial.create(
       comment: Faker::Lorem.sentence(1),
       author_name: Faker::Name.name,
       shelter: shelter,
       c_at: Faker::Date.backward(rand(10))
     )
+    testimonial.save!
+    puts "    #{testimonial.comment}"
+
   end
-  puts "#{shelter.name}: #{shelter.rating}  at #{shelter.location}"
 end
