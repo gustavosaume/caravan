@@ -1,7 +1,13 @@
-- name: Shelter 1
+- name: Ali Forney Center
   rating: 5
+  Address: 
   description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.'
-  location: [40.23456, -73.09876]
+  location: [40.810804,-73.952215]
+  Phone Number: Call for more info 212 206 20574
+  What you need to know: LGBTQ friendly, referral to housing program needed. 
+  What to bring: 
+  Main services: Drop-in Center, meals, showers, free HIV tests, support group & therapy, transitional housing
+
 
 - name: Shelter 2
   rating: 5
