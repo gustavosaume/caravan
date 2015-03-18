@@ -34,13 +34,18 @@
   Total Number of Beds: 10 
   What you need to know: Many youth referred to Trinity Place are actively looking for jobs or going back to school
   Main services: Mental Health, Food, Job Training/Assistance, Health Services, Art Classes, Case management
-  Filters: LGBT friendly, 
+  Filters: LGBT friendly
   
 
-- name: Shelter 4
+- name: The Covenant House
   rating: 8
-  description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.'
-  location: [41.94488, -72.00002]
+  Address: 461 8th Avenue, New York, NY‎
+  description: 'Covenant House was founded in 1972 with the simple, profound mission to help homeless kids escape the streets. Today we are the largest privately funded charity in the Americas providing loving care and vital services to homeless, abandoned, abused, trafficked, and exploited youth.'
+  Total Number Of Beds: 100
+  location: [40.752198,-73.994238]
+  What you need to know: Beds can be hard to get. Call before you go, or show up early and often. 
+  Main services: Crisis Care, Mental Health/Counselling, Food, Job Training/Assistance, Health Services,  Case management
+  Filters: LGBT friendly
 
 - name: Shelter 5
   rating: 10
