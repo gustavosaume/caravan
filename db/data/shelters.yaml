@@ -1,23 +1,32 @@
 - name: Ali Forney Center
   rating: 5
-  Address: 
-  description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.'
+  Address: 224 West 35th Street, New York, NY 10123
+  description:'The Mission of the Ali Forney Center is to help homeless Lesbian, Gay, Bisexual, Transgender and Questioning youth be safe and become independent as they move from adolescence to adulthood.'
   location: [40.810804,-73.952215]
-  Phone Number: Call for more info 212 206 20574
-  What you need to know: LGBTQ friendly, referral to housing program needed. 
+  Phone Number: (212) 206 0574
+  Website: aliforneycenter.org
+  What you need to know: At the Drop-in Center, you will complete an Intake and then be connected to your own case manager who will help you with any services you need. 
   What to bring: 
   Main services: Drop-in Center, meals, showers, free HIV tests, support group & therapy, transitional housing
+  Filters: LGBTQ friendly, referral to housing needed. 
 
 
-- name: Shelter 2
+- name: GEMS
   rating: 5
-  description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.'
-  location: [40.09876, -73.12345]
+  Address: Not Disclosed.
+  description: Girls Educational & Mentoring Services (GEMS) is specifically designed to serve girls and young women who have experienced commercial sexual exploitation and domestic trafficking.
+  Phone Number: (212) 926 8089 
+  Website: gems-girls.org
+  What you need to know: You will need to be referred in order to be considered for housing.
+  Main services: Transitional housing, survivor support and training, Youth Development & Leadership, educational initiatives, short term crisis care
+  Filters: Court Advocacy, Short term crisis care, holistic case management, Transitional and supportive housing, youth leadership, educational initiatives
+
 
 - name: Shelter 3
   rating: 5
   description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.'
   location: [40.98888, -72.00002]
+  
 
 - name: Shelter 4
   rating: 8
