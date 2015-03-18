@@ -1,10 +1,11 @@
 - name: Ali Forney Center
   rating: 5
-  Address: 224 West 35th Street, New York, NY 10123
+  Address: 224 West 35th Street, New York, NY 
   description:'The Mission of the Ali Forney Center is to help homeless Lesbian, Gay, Bisexual, Transgender and Questioning youth be safe and become independent as they move from adolescence to adulthood.'
   location: [40.810804,-73.952215]
   Phone Number: (212) 206 0574
   Website: aliforneycenter.org
+  Total Number of Beds: 
   What you need to know: At the Drop-in Center, you will complete an Intake and then be connected to your own case manager who will help you with any services you need. 
   What to bring: 
   Main services: Drop-in Center, meals, showers, free HIV tests, support group & therapy, transitional housing
@@ -17,15 +18,23 @@
   description: Girls Educational & Mentoring Services (GEMS) is specifically designed to serve girls and young women who have experienced commercial sexual exploitation and domestic trafficking.
   Phone Number: (212) 926 8089 
   Website: gems-girls.org
+  Total Number of Beds: 
   What you need to know: You will need to be referred in order to be considered for housing.
   Main services: Transitional housing, survivor support and training, Youth Development & Leadership, educational initiatives, short term crisis care
   Filters: Court Advocacy, Short term crisis care, holistic case management, Transitional and supportive housing, youth leadership, educational initiatives
 
 
-- name: Shelter 3
+- name: Trinity Place Shelter
   rating: 5
-  description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.'
-  location: [40.98888, -72.00002]
+  Address: 164 West 100th Street, New York, NY
+  description: 'Our mission is to help homeless lesbian, gay, bisexual, transgender or queer (LGBTQ*) youth and young adults in New York City to safely transition out of the shelter system and grow into independent, positive, and productive adults.'
+  location: [40.7962104,-73.9680821]
+  Phone Number: (646) 580 7045
+  Website: trinityplaceshelter.org
+  Total Number of Beds: 10 
+  What you need to know: Many youth referred to Trinity Place are actively looking for jobs or going back to school
+  Main services: Mental Health, Food, Job Training/Assistance, Health Services, Art Classes, Case management
+  Filters: LGBT friendly, 
   
 
 - name: Shelter 4
