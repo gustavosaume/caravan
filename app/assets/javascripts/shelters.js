@@ -39,16 +39,21 @@ $(document).ready(function () {
   });
 
   // add map
-  var map = new google.maps.Map($("#shelter-list-map")[0]);
+  var map = new google.maps.Map($("#shelter-list-map")[0], {
+    scrollwheel: false,
+  });
   var bounds = new google.maps.LatLngBounds();
   shelters.forEach(function(shelter) {
-    var latLng = new google.maps.LatLng(shelter["location"][0], shelter["location"][1]);
-    var marker = new google.maps.Marker({
-      animation: google.maps.Animation.DROP,
-      position: latLng,
-      map: map
-    });
-    bounds.extend(latLng);
+    var location = shelter.location;
+    if (location) {
+      var latLng = new google.maps.LatLng(location.latlon[0], location.latlon[1]);
+      var marker = new google.maps.Marker({
+        animation: google.maps.Animation.DROP,
+        position: latLng,
+        map: map,
+      });
+      bounds.extend(latLng);
+    }
   });
   map.fitBounds(bounds);
 });

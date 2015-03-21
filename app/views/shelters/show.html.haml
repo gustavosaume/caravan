@@ -9,7 +9,14 @@
   #rating.rating{data: {rating: @shelter.rating}}
   %a.flag{href: "#report"} Report a problem
 %p #{@shelter.description}
-#shelter-map{data: {center: {lat: @shelter.location[0], lng: @shelter.location[1]}}}
+
+- location = @shelter.location
+- center = {}
+- unless location.nil?
+  - center[:lat] = location.latlon[0]
+  - center[:lon] = location.latlon[1]
+
+#shelter-map{data: {center: center}}
 
 %ul#testimonials.small-list
   - @shelter.testimonials.each do |t|
@@ -25,7 +32,3 @@
         = t[:comment]
         %footer
           %cite= t[:author_name]
-/ %p#notice= notice
-/ = link_to 'Edit', edit_shelter_path(@shelter)
-/ |
-/ = link_to 'Back', shelters_path
