@@ -2,14 +2,36 @@ class Shelter
   include Mongoid::Document
 
   field :name, type: String
-  field :description, type: String
   field :rating, type: Float
-  field :location, type: Array
+  field :description, type: String
+  field :phone, type: String
+  field :website, type: String
+  field :max_beds, type: Integer
+  field :need_to_know, type: String
+  
+  field :services, type: Array
+  field :filters, type: Array
 
+  
+
+  # Relations
+  #########################################################
+
+  embeds_one :location
   has_many :testimonials
   
 
-  index({ location: "2d"}, { min: -200, max: 200 })
+
+  # Indexes
+  #########################################################
+
+  index({ 'location.lonlat' => '2d' },
+        { min: -180, max: 180, background: true })
+
+
+
+  # Functions
+  #########################################################
 
   def to_hash
     {

@@ -12,11 +12,34 @@ Mongoid.purge!
 shelters = YAML.load_file('db/data/shelters.yaml')
 shelters.each do |json_shelter|
   json_shelter.symbolize_keys!
-  shelter = Shelter.create(
-    name:        json_shelter[:name],
-    description: json_shelter[:description],
-    rating:      json_shelter[:rating],
-    location:    json_shelter[:location])
+
+  shelter = Shelter.new(
+      name:         json_shelter[:name],
+      rating:       json_shelter[:rating],
+      description:  json_shelter[:description],
+      phone:        json_shelter[:phone],
+      website:      json_shelter[:website],
+      max_beds:     json_shelter[:max_beds],
+      need_to_know: json_shelter[:need_to_know]
+    )
+
+
+  json_location = json_shelter[:location]
+  if json_location
+    latlon = json_location[:coordinates]
+    location = Location.new(
+        street: json_location[:street],
+        city:   json_location[:city],
+        state:  json_location[:state],
+        lonlat: latlon.nil? ? nil : latlon.reverse
+      )  
+    shelter.location = location
+  end
+  
+
+  shelter.services = json_shelter[:services]
+  shelter.filters = json_shelter[:filters]
+
   shelter.save
 end
 
