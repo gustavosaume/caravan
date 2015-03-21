@@ -25,7 +25,10 @@ shelters.each do |json_shelter|
 
 
   json_location = json_shelter[:location]
+
   if json_location
+    json_location.symbolize_keys!
+  
     latlon = json_location[:coordinates]
     location = Location.new(
         street: json_location[:street],

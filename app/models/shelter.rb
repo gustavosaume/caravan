@@ -35,11 +35,18 @@ class Shelter
 
   def to_hash
     {
-      description: self.description,
       id: self.id.to_s,
-      location: self.location,
       name: self.name,
-      rating: self.rating
+      rating: self.rating,
+      description: self.description,
+      phone: self.phone,
+      website: self.website,
+      max_beds: self.max_beds,
+      need_to_know: self.need_to_know,
+      location: self.location.nil? ? nil : self.location.to_hash,
+      
+      services: self.services,
+      filters: self.filters
     }
   end
 end

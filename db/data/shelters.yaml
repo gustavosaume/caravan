@@ -72,7 +72,7 @@
     street: 461 8th Avenue
     city: New York
     state: NY
-    coordinates: ‎[40.752198,-73.994238]
+    coordinates: [40.752198,-73.994238]
   description: "Covenant House was founded in 1972 with the simple, profound mission to help homeless kids escape the streets. Today we are the largest privately funded charity in the Americas providing loving care and vital services to homeless, abandoned, abused, trafficked, and exploited youth."
   max_beds: 100
   need_to_know: "Beds can be hard to get. Call before you go, or show up early and often."
