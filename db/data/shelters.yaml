@@ -1,83 +1,90 @@
 - name: Ali Forney Center
   rating: 5
-  Address: 224 West 35th Street, New York, NY 
-  description:'The Mission of the Ali Forney Center is to help homeless Lesbian, Gay, Bisexual, Transgender and Questioning youth be safe and become independent as they move from adolescence to adulthood.'
-  location: [40.810804,-73.952215]
-  Phone Number: (212) 206 0574
-  Website: aliforneycenter.org
-  Total Number of Beds: 
-  What you need to know: At the Drop-in Center, you will complete an Intake and then be connected to your own case manager who will help you with any services you need. 
-  What to bring: 
-  Main services: Drop-in Center, meals, showers, free HIV tests, support group & therapy, transitional housing
-  Filters: LGBTQ friendly, referral to housing needed. 
-
+  location:
+    street: 224 West 35th Street
+    city: New York
+    state: NY
+    coordinates: [40.810804,-73.952215]
+  description: "The Mission of the Ali Forney Center is to help homeless Lesbian, Gay, Bisexual, Transgender and Questioning youth be safe and become independent as they move from adolescence to adulthood."
+  phone: (212) 206 0574
+  website: aliforneycenter.org
+  max_beds: 
+  neet_to_know: "At the Drop-in Center, you will complete an Intake and then be connected to your own case manager who will help you with any services you need."
+  services: 
+    - drop-in center
+    - meals
+    - showers
+    - free HIV tests
+    - support group & therapy
+    - transitional housing
+  filters:
+    - LGBTQ friendly
+    - referral to housing needed
 
 - name: GEMS
   rating: 5
-  Address: Not Disclosed.
-  description: Girls Educational & Mentoring Services (GEMS) is specifically designed to serve girls and young women who have experienced commercial sexual exploitation and domestic trafficking.
-  Phone Number: (212) 926 8089 
-  Website: gems-girls.org
-  Total Number of Beds: 
-  What you need to know: You will need to be referred in order to be considered for housing.
-  Main services: Transitional housing, survivor support and training, Youth Development & Leadership, educational initiatives, short term crisis care
-  Filters: Court Advocacy, Short term crisis care, holistic case management, Transitional and supportive housing, youth leadership, educational initiatives
-
+  description: "Girls Educational & Mentoring Services (GEMS) is specifically designed to serve girls and young women who have experienced commercial sexual exploitation and domestic trafficking."
+  phone: (212) 926 8089 
+  website: gems-girls.org
+  max_beds: 
+  need_to_know: You will need to be referred in order to be considered for housing.
+  services: 
+    - transitional housing
+    - survivor support and training
+    - youth Development & leadership
+    - educational initiatives
+    - short term crisis care
+  filters:
+    - court advocacy
+    - short term crisis care
+    - holistic case management
+    - transitional and supportive housing
+    - youth leadership
+    - educational initiatives
 
 - name: Trinity Place Shelter
   rating: 5
-  Address: 164 West 100th Street, New York, NY
-  description: 'Our mission is to help homeless lesbian, gay, bisexual, transgender or queer (LGBTQ*) youth and young adults in New York City to safely transition out of the shelter system and grow into independent, positive, and productive adults.'
-  location: [40.7962104,-73.9680821]
-  Phone Number: (646) 580 7045
-  Website: trinityplaceshelter.org
-  Total Number of Beds: 10 
-  What you need to know: Many youth referred to Trinity Place are actively looking for jobs or going back to school
-  Main services: Mental Health, Food, Job Training/Assistance, Health Services, Case management, Mother and Child Classes
-  Filters: LGBT friendly, Mother & Child, 
-  
+  location:
+    street: 164 West 100th Street
+    city: New York
+    state: NY
+    coordinates: [40.7962104,-73.9680821]
+  description: "Our mission is to help homeless lesbian, gay, bisexual, transgender or queer (LGBTQ*) youth and young adults in New York City to safely transition out of the shelter system and grow into independent, positive, and productive adults."
+  phone: (646) 580 7045
+  website: trinityplaceshelter.org
+  max_beds: 10 
+  need_to_know: "Many youth referred to Trinity Place are actively looking for jobs or going back to school"
+  services:
+    - mental health
+    - food
+    - job training
+    - job assistance
+    - health services
+    - case management
+    - mother and child classes
+  filters:
+    - LGBT friendly
+    - mother & child
 
 - name: The Covenant House
   rating: 8
-  Address: 461 8th Avenue, New York, NY‎
-  description: 'Covenant House was founded in 1972 with the simple, profound mission to help homeless kids escape the streets. Today we are the largest privately funded charity in the Americas providing loving care and vital services to homeless, abandoned, abused, trafficked, and exploited youth.'
-  Total Number Of Beds: 100
-  location: [40.752198,-73.994238]
-  What you need to know: Beds can be hard to get. Call before you go, or show up early and often. 
-  Main services: Crisis Care, Food/Hot Meals,  Mental Health/Counselling, Job Training/Assistance, Health Services, Case management
-  Filters: LGBT friendly
-
-- name: Shelter 5
-  rating: 10
-  description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.'
-  location: [40.98888, -71.98002]
-
-- name: Shelter 6
-  rating: 1
-  description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.'
-  location: [40.98888, -72.00002]
-
-- name: Shelter 7
-  rating: 3
-  description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.'
-  location: [41.98888, -70.90002]
-
-- name: Shelter 8
-  rating: 7
-  description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.'
-  location: [40.08888, -72.70002]
-
-- name: Shelter 9
-  rating: 3
-  description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.'
-  location: [40.03488, -72.98002]
-
-- name: Shelter 10
-  rating: 10
-  description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.'
-  location: [41.00003, -72.00002]
-
-- name: Shelter 11
-  rating: 2
-  description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.'
-  location: [40.98888, -73.00002]
+  location:
+    street: 461 8th Avenue
+    city: New York
+    state: NY
+    coordinates: ‎[40.752198,-73.994238]
+  description: "Covenant House was founded in 1972 with the simple, profound mission to help homeless kids escape the streets. Today we are the largest privately funded charity in the Americas providing loving care and vital services to homeless, abandoned, abused, trafficked, and exploited youth."
+  max_beds: 100
+  need_to_know: "Beds can be hard to get. Call before you go, or show up early and often."
+  services: 
+    - crisis care
+    - food
+    - hot meals
+    - mental health
+    - counselling
+    - job training
+    - job assistance
+    - health services
+    - case management
+  filters:
+    - LGBT friendly
