@@ -21,13 +21,6 @@
 %ul#testimonials.small-list
   - @shelter.testimonials.each do |t|
     %li.list-item
-      .vote-info
-        %button.vote-button.up
-          %i.fa.fa-arrow-up
-          #{rand(100)}
-        %button.vote-button.down
-          %i.fa.fa-arrow-down
-          #{rand(100)}
       %blockquote.testimonial
         = t[:comment]
         %footer

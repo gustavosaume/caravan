@@ -62,30 +62,10 @@
 }
 
 .small-list {
-  > .list-item {
+  > li {
     padding: 10px;
     overflow: auto;
   }
-}
-
-.vote-info {
-  display: inline-block;
-  @include span(2 of 12);
-}
-
-.vote-button {
-  border: none;
-  background: none;
-
-  &.up > i {
-    color: green;
-  }
-
-  &.down > i {
-    color: red;
-  }
-
-  @include typeSize(base);
 }
 
 .testimonial {
