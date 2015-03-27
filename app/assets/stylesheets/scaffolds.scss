@@ -1,3 +1,5 @@
+@import "compass/typography/lists";
+
 body {
   background-color: #fff;
   color: #333;
@@ -65,5 +67,20 @@ div {
   ul li {
     font-size: 12px;
     list-style: square;
+  }
+}
+
+.header {
+  overflow: hidden;
+
+  > h1 {
+    display: inline-block;
+  }
+
+  .nav {
+    @include horizontal-list;
+
+    padding-top: 10px;
+    float: right;
   }
 }
