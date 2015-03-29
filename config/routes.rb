@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   get 'welcome/index'
 
-  resources :shelters
+  resources :shelters do
+    resources :testimonials, only: [:create]
+  end
 
   root 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
