@@ -49,4 +49,8 @@ class Shelter
       filters: self.filters
     }
   end
+
+  def sorted_testimonials
+    self.testimonials.reverse
+  end
 end

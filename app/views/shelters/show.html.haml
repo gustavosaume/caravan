@@ -43,7 +43,7 @@
   %address #{location.street}, #{location.state}, #{location.city}
 
 %ul#testimonials.small-list
-  - @shelter.testimonials.each do |t|
+  - @shelter.sorted_testimonials.each do |t|
     %li.list-item
       %blockquote.testimonial
         = t[:comment]
