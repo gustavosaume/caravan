@@ -2,8 +2,8 @@ class Testimonial
   include Mongoid::Document
   include Mongoid::Timestamps::Created::Short
 
-  field :comment
-  field :author_name
+  field :comment, type: String
+  field :author_name, type: String, default: "anonymous"
 
   belongs_to :shelter
 

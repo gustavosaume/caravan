@@ -39,4 +39,36 @@ $(document).ready(function() {
       rating: $("#rating").data("rating"),
     }
   });
+
+  $('#rate').click(function() {
+    var modal = new ModalView({
+      partials: {
+        modalContent: $('#template-modal-testimonial').html()
+      }
+    });
+
+    modal.on('submit', function() {
+      var url = window.location.pathname + '/testimonials';
+      var data = {};
+      $("#testimonial-form")
+        .serializeArray()
+        .filter(function(element) {
+          return element.value.length > 0;
+        })
+        .forEach(function(element) {
+          data[element.name] = element.value;
+        });
+
+      if (data.comment !== undefined) {
+        $.post(url, {"testimonial": data}).done(function() {
+          document.location.reload(true);
+        }).fail(function() {
+          console.log("FAILURE");
+        });
+      }
+      else {
+        window.alert("You need to add a testimonial first!");
+      }
+    });
+  });
 });

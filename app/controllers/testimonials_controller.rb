@@ -4,7 +4,7 @@ class TestimonialsController < ApplicationController
   # POST /shelters/:shelter_id/testimonial
   # POST /shelters/:shelter_id/testimonial.json
   def create
-    puts "CREATE #{testimonial_params}"
+    puts "CREATE #{params}"
     testimonial = Testimonial.create(testimonial_params)
     render :json => testimonial.to_hash
   end

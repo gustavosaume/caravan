@@ -143,6 +143,7 @@ GEM
       sprockets-rails
     rails-assets-ractive (0.7.1)
     rails-assets-ractive-events-tap (0.1.0)
+    rails-assets-ractive-transitions-fade (0.1.2)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.5)
@@ -228,6 +229,7 @@ DEPENDENCIES
   rails (= 4.2.0)
   rails-assets-ractive (~> 0.7.0)!
   rails-assets-ractive-events-tap!
+  rails-assets-ractive-transitions-fade!
   rails_12factor
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

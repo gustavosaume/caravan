@@ -19,6 +19,7 @@ gem 'font-awesome-rails', '~> 4.3.0.0'
 source 'https://rails-assets.org' do
   gem 'rails-assets-ractive', '~> 0.7.0'
   gem 'rails-assets-ractive-events-tap'
+  gem 'rails-assets-ractive-transitions-fade'
 end
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes

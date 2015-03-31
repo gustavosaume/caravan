@@ -1,3 +1,6 @@
+@import "compass/css3/box-sizing";
+@import "compass/css3/border-radius";
+
 /****** Layout components *****/
 .hero {
   background-color: lightgrey;
@@ -56,3 +59,115 @@
 .rating > input:checked:not(:disabled) ~ label:hover,
 .rating > label:hover ~ input:checked:not(:disabled) ~ label, /* lighten current selection */
 .rating > input:checked:not(:disabled) ~ label:hover ~ label { color: #FFED85;  } 
+
+
+
+
+/***** Style Modal View *********/
+
+.modal-background {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  padding: 0.5em;
+  text-align: center;
+  @include box-sizing(border-box);
+}
+
+.modal-outer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.modal {
+  position: relative;
+  background-color: white;
+  padding: 2em;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  margin: 0 auto;
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  @include box-sizing(border-box);
+  @include border-radius(4px);
+
+  > .dismiss {
+    right: 10px;
+    top: 10px;
+    position: absolute;
+  }
+}
+
+.modal-button {
+  text-align: center;
+  background-color: rgb(70,70,180);
+  color: white;
+  padding: 0.5em 1em;
+  display: inline-block;
+  cursor: pointer;
+}
+
+
+
+/****** FORMS *****/
+label {
+  display: block;
+  max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+  margin: 10px auto 5px;
+  text-align: left;
+  font-weight: bold;
+}
+
+input {
+  padding: 5px;
+}
+
+textarea {
+  padding: 5px;
+  resize: none;
+}
+// Common form controls
+//
+// Shared size and type resets for form controls. Apply `.form-control` to any
+// of the following form controls:
+//
+// select
+// textarea
+// input[type="text"]
+// input[type="password"]
+// input[type="datetime"]
+// input[type="datetime-local"]
+// input[type="date"]
+// input[type="month"]
+// input[type="time"]
+// input[type="week"]
+// input[type="number"]
+// input[type="email"]
+// input[type="url"]
+// input[type="search"]
+// input[type="tel"]
+// input[type="color"]
+.form-control {
+  display: block;
+  width: 100%;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid lightgray;
+  
+  @include border-radius(4px);
+
+  // .box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+
+  // Disabled and read-only inputs
+  //
+  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+  // don't honor that edge case; we style them as disabled anyway.
+  // &[disabled],
+  // &[readonly],
+  // fieldset[disabled] & {
+  //   background-color: @input-bg-disabled;
+  //   opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+  // }
+}

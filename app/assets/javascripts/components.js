@@ -28,3 +28,51 @@ var StarRating = Ractive.extend({
 });
 
 Ractive.components.starRating = StarRating;
+
+
+// MODAL COMMPONENT
+var modalTemplate = '<div class="modal-background" on-tap="close" intro="fade" outro="fade">' +
+    '<div class="modal-outer">' +
+      '<div class="modal">' +
+        '<i class="fa fa-times dismiss" on-tap="close"></i>' +
+        '{{>modalContent}}' +
+      '</div>' +
+    '</div>' +
+  '</div>';
+
+var ModalView = Ractive.extend({
+  el: 'body',
+  append: true,
+  template: modalTemplate,
+  
+  onrender: function() {
+    var self = this, resizeHandler;
+
+    this.outer = this.find('.modal-outer');
+    this.modal = this.find('.modal');
+
+    this.on('close', function(event) {
+      if (!this.modal.contains(event.original.target) || $(event.original.target).hasClass('dismiss')) {
+        this.teardown();
+      }
+    });
+
+    window.addEventListener('resize', resizeHandler = function() {
+      self.center();
+    }, false);
+
+    this.on('teardown', function() {
+      window.removeEventListener('resize', resizeHandler);
+    }, false);
+
+    this.center();
+  },
+
+  center: function() {
+    var outerHeight, modalHeight, verticalSpace;
+    outerHeight = this.outer.clientHeight;
+    modalHeight = this.modal.clientHeight;
+    verticalSpace = (outerHeight - modalHeight) / 2;
+    this.modal.style.top = verticalSpace + 'px';
+  }
+});

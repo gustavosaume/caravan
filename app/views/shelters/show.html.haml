@@ -12,6 +12,7 @@
 
 .reviews
   #rating.rating{data: {rating: @shelter.rating}}
+  %button#rate Add your rating
   %a.flag{href: "#report"} Report a problem
 %p #{@shelter.description}
 
@@ -49,3 +50,15 @@
         = t[:comment]
         %footer
           %cite= t[:author_name]
+          %i= t[:created_at].strftime(" on %m/%d/%y")
+
+%script#template-modal-testimonial{type: :ractive}
+  %section
+    %h1 Submit your testimonial
+    %form#testimonial-form.vertical-form{"on-submit" => "submit"}
+      %label{for: "testimonial-name"} Your name
+      %input#testimonial-name.form-control{type: "text", name: "author_name", placeholder: "(Leave empty for anonymous)"}
+      %label{for: "testimonial-comment"} Testimonial
+      %textarea#testimonial-comment.form-control{name: "comment", rows: "5", columns: "40"}
+    %button.dismiss{"on-tap" => "close"} Cancel
+    %button{"on-tap" => "submit"} Submit
