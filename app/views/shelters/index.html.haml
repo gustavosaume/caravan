@@ -32,13 +32,13 @@
     {{>shelter}}
     {{/each}}
 
-  <!-- {{>shelter}} -->
+  {{#partial shelter}}
   %li.shelter-item
     %h1 {{name}}
     %starRating{id: '{{id}}', rating: '{{rating}}', isEnabled: 'false'}
     %p {{description}}
     %a.action-link{href: '/shelters/{{id}}'} Find Out More 
-  <!-- {{/shelter}} -->
+  {{/partial}}
 
 / %p#notice= notice
 / %h1 Listing Shelters
