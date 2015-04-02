@@ -25,18 +25,18 @@ $(document).ready(function () {
 
 
   //FILTERS
-  var shelterFilter = new Ractive({
-    el: '#shelter-list-filter',
-    template: '#template-shelters-filter',
-    data: {
-      sortColumn: defaultSortColumn
-    }
-  });
+  // var shelterFilter = new Ractive({
+  //   el: '#shelter-list-filter',
+  //   template: '#template-shelters-filter',
+  //   data: {
+  //     sortColumn: defaultSortColumn
+  //   }
+  // });
 
-  shelterFilter.on('sort', function(event, column) {
-    this.set('sortColumn', column);
-    racShelters.set('sortColumn', column);
-  });
+  // shelterFilter.on('sort', function(event, column) {
+  //   this.set('sortColumn', column);
+  //   racShelters.set('sortColumn', column);
+  // });
 
   // add map
   var map = new google.maps.Map($("#shelter-list-map")[0], {

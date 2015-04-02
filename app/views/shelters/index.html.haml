@@ -8,23 +8,23 @@
 #shelter-list-filter
 #shelter-list-container{data: {shelters: @shelters.map(&:to_hash).to_json}}
 
-%script#template-shelters-filter{type: :ractive}
-  %ul.toolbar
-    {{#if sortColumn == 'distance'}}
-    %li.toolbarItem.filter.sorted{:'on-tap' => 'sort:distance'} Distance
-    {{else}}
-    %li.toolbarItem.filter{:'on-tap' => 'sort:distance'} Distance
-    {{/if}}
-    {{#if sortColumn == 'rating'}}
-    %li.toolbarItem.filter.sorted{:'on-tap' => 'sort:rating'} Rating
-    {{else}}
-    %li.toolbarItem.filter{:'on-tap' => 'sort:rating'} Rating
-    {{/if}}
-    {{#if sortColumn == 'name'}}
-    %li.toolbarItem.filter.sorted{:'on-tap' => 'sort:name'} Alphabetical
-    {{else}}
-    %li.toolbarItem.filter{:'on-tap' => 'sort:name'} Alphabetical
-    {{/if}}
+/ %script#template-shelters-filter{type: :ractive}
+/   %ul.toolbar
+/     {{#if sortColumn == 'distance'}}
+/     %li.toolbarItem.filter.sorted{:'on-tap' => 'sort:distance'} Distance
+/     {{else}}
+/     %li.toolbarItem.filter{:'on-tap' => 'sort:distance'} Distance
+/     {{/if}}
+/     {{#if sortColumn == 'rating'}}
+/     %li.toolbarItem.filter.sorted{:'on-tap' => 'sort:rating'} Rating
+/     {{else}}
+/     %li.toolbarItem.filter{:'on-tap' => 'sort:rating'} Rating
+/     {{/if}}
+/     {{#if sortColumn == 'name'}}
+/     %li.toolbarItem.filter.sorted{:'on-tap' => 'sort:name'} Alphabetical
+/     {{else}}
+/     %li.toolbarItem.filter{:'on-tap' => 'sort:name'} Alphabetical
+/     {{/if}}
 
 %script#template-shelters{type: :ractive}
   %ul#shelter-list.list
