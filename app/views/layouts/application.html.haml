@@ -7,6 +7,18 @@
     = javascript_include_tag 'application'
     = yield :head
     = csrf_meta_tags
+    :javascript
+      +function(l,y,t,i,c,s) {
+          l['LocalyticsGlobal'] = i;
+          l[i] = function() { (l[i].q = l[i].q || []).push(arguments) };
+          l[i].t = +new Date;
+          (s = y.createElement(t)).type = 'text/javascript';
+          s.src = '//web.localytics.com/v3/localytics.js';
+          (c = y.getElementsByTagName(t)[0]).parentNode.insertBefore(s, c);
+          ll('init', 'f7ecf3fc1a8fce26991ae0e-9aee16d8-d8bf-11e4-b055-009c5fda0a25', {
+            trackPageView: true
+          });
+      }(window, document, 'script', 'll');
   %body
     .header
       %h1 Caravan
