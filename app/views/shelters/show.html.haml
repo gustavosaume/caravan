@@ -56,9 +56,10 @@
   %section
     %h1 Submit your testimonial
     %form#testimonial-form.vertical-form{"on-submit" => "submit"}
+      %starRating{id: '{{id}}', name: 'rating'}
       %label{for: "testimonial-name"} Your name
       %input#testimonial-name.form-control{type: "text", name: "author_name", placeholder: "(Leave empty for anonymous)"}
       %label{for: "testimonial-comment"} Testimonial
-      %textarea#testimonial-comment.form-control{name: "comment", rows: "5", columns: "40"}
+      %textarea#testimonial-comment.form-control{name: "comment", rows: "5", columns: "40", placeholder: "How was your experience at the #{@shelter.name}?"}
     %button.dismiss{"on-tap" => "close"} Cancel
     %button{"on-tap" => "submit"} Submit

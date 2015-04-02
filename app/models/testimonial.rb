@@ -4,6 +4,8 @@ class Testimonial
 
   field :comment, type: String
   field :author_name, type: String, default: "anonymous"
+  field :rating, type: BigDecimal
+  
 
   belongs_to :shelter
 

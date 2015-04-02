@@ -4,7 +4,6 @@ class TestimonialsController < ApplicationController
   # POST /shelters/:shelter_id/testimonial
   # POST /shelters/:shelter_id/testimonial.json
   def create
-    puts "CREATE #{params}"
     testimonial = Testimonial.create(testimonial_params)
     render :json => testimonial.to_hash
   end
@@ -17,6 +16,6 @@ class TestimonialsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def testimonial_params
-      params.require(:testimonial).permit(:comment, :author_name, :shelter_id, :shelter).merge(shelter: @shelter)
+      params.require(:testimonial).permit(:comment, :author_name, :shelter_id, :shelter, :rating).merge(shelter: @shelter)
     end
 end

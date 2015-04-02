@@ -37,6 +37,7 @@ $(document).ready(function() {
     data: {
       id: "first",
       rating: $("#rating").data("rating"),
+      isEnabled: false,
     }
   });
 
