@@ -20,8 +20,9 @@
   filters:
     - LGBTQ friendly
     - referral to housing needed
+  thumbnail: /images/shelters/ali_forney_center.jpg
 
-- name: GEMS
+- name: The Door
   rating: 5
   description: "Girls Educational & Mentoring Services (GEMS) is specifically designed to serve girls and young women who have experienced commercial sexual exploitation and domestic trafficking."
   phone: (212) 926 8089 
@@ -41,30 +42,7 @@
     - transitional and supportive housing
     - youth leadership
     - educational initiatives
-
-- name: Trinity Place Shelter
-  rating: 5
-  location:
-    street: 164 West 100th Street
-    city: New York
-    state: NY
-    coordinates: [40.7962104,-73.9680821]
-  description: "Our mission is to help homeless lesbian, gay, bisexual, transgender or queer (LGBTQ*) youth and young adults in New York City to safely transition out of the shelter system and grow into independent, positive, and productive adults."
-  phone: (646) 580 7045
-  website: trinityplaceshelter.org
-  max_beds: 10 
-  need_to_know: "Many youth referred to Trinity Place are actively looking for jobs or going back to school"
-  services:
-    - mental health
-    - food
-    - job training
-    - job assistance
-    - health services
-    - case management
-    - mother and child classes
-  filters:
-    - LGBT friendly
-    - mother & child
+  thumbnail: /images/shelters/the_door.jpg
 
 - name: The Covenant House
   rating: 8
@@ -88,3 +66,4 @@
     - case management
   filters:
     - LGBT friendly
+  thumbnail: /images/shelters/covenant_house.gif

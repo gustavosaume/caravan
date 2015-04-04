@@ -8,6 +8,7 @@ class Shelter
   field :website, type: String
   field :max_beds, type: Integer
   field :need_to_know, type: String
+  field :thumbnail, type: String
   
   field :services, type: Array
   field :filters, type: Array
@@ -44,9 +45,12 @@ class Shelter
       max_beds: self.max_beds,
       need_to_know: self.need_to_know,
       location: self.location.nil? ? nil : self.location.to_hash,
+      thumbnail: self.thumbnail,
       
       services: self.services,
-      filters: self.filters
+      filters: self.filters,
+
+      latest_testimonial: self.sorted_testimonials.first
     }
   end
 

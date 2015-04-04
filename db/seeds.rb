@@ -20,7 +20,8 @@ shelters.each do |json_shelter|
       phone:        json_shelter[:phone],
       website:      json_shelter[:website],
       max_beds:     json_shelter[:max_beds],
-      need_to_know: json_shelter[:need_to_know]
+      need_to_know: json_shelter[:need_to_know],
+      thumbnail:    json_shelter[:thumbnail]
     )
 
 
