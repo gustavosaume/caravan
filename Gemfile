@@ -10,6 +10,7 @@ gem 'faker', '~> 1.4.3'
 gem 'haml-rails', '~> 0.8.2'
 gem 'sass-rails', '~> 5.0'
 gem 'compass-rails', '~> 2.0.4'
+gem 'modernizr-mixin'
 gem 'modular-scale', '~> 2.0.6'
 gem 'breakpoint', '~> 2.5.0'
 gem 'susy', '~> 2.2.2'
@@ -20,6 +21,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-ractive', '~> 0.7.0'
   gem 'rails-assets-ractive-events-tap'
   gem 'rails-assets-ractive-transitions-fade'
+  gem 'rails-assets-modernizr'
 end
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes

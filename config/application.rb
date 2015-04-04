@@ -12,6 +12,7 @@ require "rails/test_unit/railtie"
 
 require "breakpoint"
 require "modular-scale"
+require "modernizr-mixin"
 
 
 # Require the gems listed in Gemfile, including any gems
