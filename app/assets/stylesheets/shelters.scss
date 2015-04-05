@@ -34,10 +34,10 @@
   padding: rhythm(1);
 
   @include gallery(4 of 12);
+}
 
-  > img {
-    height: 222px;
-  }
+.shelter-logo {
+  height: 222px;
 }
 
 .action-link {
