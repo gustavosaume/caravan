@@ -50,7 +50,7 @@ class Shelter
       services: self.services,
       filters: self.filters,
 
-      latest_testimonial: self.sorted_testimonials.first
+      latest_testimonial: self.sorted_testimonials.first.to_hash
     }
   end
 

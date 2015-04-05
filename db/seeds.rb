@@ -65,3 +65,33 @@ Shelter.all.each do |shelter|
 
   end
 end
+
+Shelter.find_by(name: "Ali Forney Center") do |s|
+  testimonial = Testimonial.create(
+      comment: "It's strictly LGBT youth. Its a great environment. The staff’s LGBT, everybody understands where you’re coming from, some have had their own struggles & periods of homelessness, so its a great way to relate to people, see where they are to see where you can actually go, if not further.",
+      author_name: "George",
+      shelter: s,
+      thumbnail: "/images/testimonials/george.jpg"
+    )
+    testimonial.save! 
+end
+
+Shelter.find_by(name: "The Door") do |s|
+  testimonial = Testimonial.create(
+      comment: "They do a lot of great things. They have after school programs if you just want to get away for a bit they have computer classes, movies, medical attention, trans care and more.",
+      author_name: "RANASME",
+      shelter: s,
+      thumbnail: "/images/testimonials/ranasme.jpg"
+    )
+    testimonial.save! 
+end
+
+Shelter.find_by(name: "The Covenant House") do |s|
+  testimonial = Testimonial.create(
+      comment: "Being Gay does not influence where I stay. The Covenant House has great resources and job training. Think positively and work hard, that's what matters.",
+      author_name: "JOSEPH",
+      shelter: s,
+      thumbnail: "/images/testimonials/joseph.jpg"
+    )
+    testimonial.save! 
+end

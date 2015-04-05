@@ -5,6 +5,7 @@ class Testimonial
   field :comment, type: String
   field :author_name, type: String, default: "anonymous"
   field :rating, type: BigDecimal
+  field :thumbnail, type: String, default: "/images/testimonials/placeholder.png"
   
 
   belongs_to :shelter
@@ -20,6 +21,8 @@ class Testimonial
       comment: self.comment,
       author_name: self.author_name,
       created_at: self.c_at,
+      thumbnail: thumbnail,
+      
       shelter: {
         id: shelter.id.to_s,
         name: shelter.name
