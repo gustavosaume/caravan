@@ -69,18 +69,3 @@ div {
     list-style: square;
   }
 }
-
-.header {
-  overflow: hidden;
-
-  > h1 {
-    display: inline-block;
-  }
-
-  .nav {
-    @include horizontal-list;
-
-    padding-top: 10px;
-    float: right;
-  }
-}

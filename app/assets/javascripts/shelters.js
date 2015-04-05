@@ -41,6 +41,17 @@ $(document).ready(function () {
   // add map
   var map = new google.maps.Map($("#shelter-list-map")[0], {
     scrollwheel: false,
+    panControl: false,
+    zoomControl: true,
+    zoomControlOptions: {
+      style: google.maps.ZoomControlStyle.SMALL,
+      position: google.maps.ControlPosition.RIGHT_BOTTOM,
+    },
+    mapTypeControl: true,
+    mapTypeControlOptions: {
+      position: google.maps.ControlPosition.LEFT_BOTTOM,
+    },
+    overviewMapControl: true
   });
   var bounds = new google.maps.LatLngBounds();
   shelters.forEach(function(shelter) {

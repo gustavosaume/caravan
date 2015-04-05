@@ -21,9 +21,17 @@
       }(window, document, 'script', 'll');
   %body
     .header
-      %h1 Caravan
+      .logo
+        %p Helping homeless LGBTQ youth help each other find safe shelter, faster.
       %ul.nav
-        %li= link_to 'About', '/about'
-        %li= link_to 'Contact', '/contact'
         %li= link_to 'List a shelter', '/shelters/create'
     = yield
+
+    .footer
+      %hr.logo-line.left
+      %hr.logo-line.right
+      .logo
+      %p 
+        Got questions? Feedback? Email
+        %a{href: "mailto:info@hoponcaravan.com"}
+          info@hoponcaravan.com

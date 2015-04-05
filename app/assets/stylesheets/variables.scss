@@ -2,7 +2,12 @@
 $contrast-font-color: whitesmoke;
 $base-font-color: black;
 
+$teal-color: #66C3BC;
+$blue-color: #5BA2BB;
+$button-color: $blue-color;
+$button-over-color: #74B0C5;
+
 @import "susy";
 
-@include layout(auto 12 1/4 inside fluid isolate);
 @include border-box-sizing;
+@include layout(12 (60px 20px) split fluid border-box);

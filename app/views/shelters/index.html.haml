@@ -5,8 +5,9 @@
 
 
 #shelter-list-map
-#shelter-list-filter
-#shelter-list-container{data: {shelters: @shelters.map(&:to_hash).to_json}}
+#shelter-list-container.grid-container{data: {shelters: @shelters.map(&:to_hash).to_json}}
+
+/ #shelter-list-filter
 
 / %script#template-shelters-filter{type: :ractive}
 /   %ul.toolbar
@@ -34,11 +35,17 @@
 
   {{#partial shelter}}
   %li.shelter-item
-    %h1 {{name}}
+    %img{src: '{{thumbnail}}', alt: '{{name}}'}
     %starRating{id: '{{id}}', rating: '{{rating}}', isEnabled: 'false'}
-    %p {{description}}
-    %a.action-link{href: '/shelters/{{id}}'} Find Out More 
+    %a.action-link.first{href: '/shelters/{{id}}'} More
+    %a.action-link.last{href: '/shelters/{{id}}#rate'} Rate it!
+    %blockquote.testimonial
+      %img{src: '{{latest_testimonial.thumbnail}}'}
+      %cite {{latest_testimonial.author_name}}
+      %p {{latest_testimonial.comment}}
   {{/partial}}
+
+#bottom-photo.bottom.big
 
 / %p#notice= notice
 / %h1 Listing Shelters

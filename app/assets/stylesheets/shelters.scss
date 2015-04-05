@@ -1,14 +1,13 @@
-@import "compass/reset";
-@import "compass/css3";
 @import "compass/typography";
 @import "compass/css3/border-radius";
 @import "compass/typography/vertical_rhythm";
-@import "breakpoint";
 @import "susy";
 @import "variables";
-@import 'fonts';
-@import "components";
 
+.header {
+  position: absolute;
+  z-index: 1024;
+}
 
 .toolbar {
   background-color: black;
@@ -27,33 +26,84 @@
   }
 }
 
+.shelter-list {
+  @include clearfix;
+}
+
 .shelter-item {
   padding: rhythm(1);
-  margin: rhythm(1);
-  border: 1px solid black;
-  position: relative;
 
-  @include border-radius(6px);
+  @include gallery(4 of 12);
 
-  > .action-link {
-    display: block;
-    text-align: center;
-    border-top: 1px solid black;
+  > img {
+    height: 222px;
+  }
+}
 
-    margin: 0 (rhythm(1) * -1);
+.action-link {
+  display: inline-block;
+  margin: 10px 0;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  background-color: $button-color;
 
-    &:hover {
-      color: $contrast-font-color;
-      background-color: black;
-    }
+  &:hover {
+    background-color: $button-over-color;
+  }
+}
 
-    &:last-child {
-      margin-bottom: (rhythm(1) * -1);
-    }
+.action-link.first,
+.action-link.last {
+  width: 50%;
+}
+
+.action-link.first {
+  float: left;
+}
+
+.action-link.last {
+  float: right;
+
+  &:after {
+    @include clearfix;
+  }
+}
+
+.rating {
+  display: block;
+  float: none;
+}
+
+blockquote {
+  margin: 10px 0;
+
+  p:before {
+    content: "\201C";
+  }
+
+  p:after {
+    content: "\201D";
+  }
+
+  img {
+    height: 60px;
+  }
+
+  cite {
+    text-transform: uppercase;
+    color: $blue-color;
+    font-weight: bold;
   }
 }
 
 #shelter-list-map {
   width: 100%;
   height: 400px;
+}
+
+#bottom-photo {
+  height: 542px;
+  background: rgba(0, 0, 0, 0) url("/images/bottom-background.jpg") no-repeat left top;
+  background-size: cover;
 }

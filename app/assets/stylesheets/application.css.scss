@@ -14,12 +14,14 @@
  */
 
 @import "scaffolds";
-@import "breakpoint";
 @import "compass";
 @import "compass/reset";
 @import "compass/css3";
 @import "compass/typography";
 @import "susy";
+@import "breakpoint";
+@import "variables";
 @import "fonts";
 @import "font-awesome";
+@import "components";
 @import "base";

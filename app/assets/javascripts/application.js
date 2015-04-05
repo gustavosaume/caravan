@@ -13,6 +13,7 @@
 //= require_self
 //= require jquery
 //= require jquery_ujs
+//= require modernizr
 
 //= require ractive
 //= require ractive-events-tap
