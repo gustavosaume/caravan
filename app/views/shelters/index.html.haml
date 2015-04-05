@@ -35,7 +35,8 @@
 
   {{#partial shelter}}
   %li.shelter-item
-    %img{src: '{{thumbnail}}', alt: '{{name}}'}
+    %a{href: '/shelters/{{id}}'}
+      %img{src: '{{thumbnail}}', alt: '{{name}}'}
     %starRating{id: '{{id}}', rating: '{{rating}}', isEnabled: 'false'}
     %a.action-link.first{href: '/shelters/{{id}}'} More
     %a.action-link.last{href: '/shelters/{{id}}#rate'} Rate it!
