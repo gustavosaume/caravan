@@ -53,6 +53,10 @@ $(document).ready(function () {
     },
     overviewMapControl: true
   });
+
+  var transitLayer = new google.maps.TransitLayer();
+  transitLayer.setMap(map);
+  
   var bounds = new google.maps.LatLngBounds();
   shelters.forEach(function(shelter) {
     var location = shelter.location;

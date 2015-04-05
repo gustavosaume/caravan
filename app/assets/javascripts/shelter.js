@@ -11,6 +11,17 @@ $(document).ready(function() {
   var mapOptions = {
     zoom: 14,
     scrollwheel: false,
+    panControl: false,
+    zoomControl: true,
+    zoomControlOptions: {
+      style: google.maps.ZoomControlStyle.SMALL,
+      position: google.maps.ControlPosition.RIGHT_BOTTOM,
+    },
+    mapTypeControl: true,
+    mapTypeControlOptions: {
+      position: google.maps.ControlPosition.LEFT_BOTTOM,
+    },
+    overviewMapControl: true
   };
 
   if (shelterLocation) {
@@ -22,6 +33,9 @@ $(document).ready(function() {
   }
 
   var map = new google.maps.Map($("#shelter-map")[0], mapOptions);
+
+  var transitLayer = new google.maps.TransitLayer();
+  transitLayer.setMap(map);
 
   if (shelterLocation) {
     var marker = new google.maps.Marker({
