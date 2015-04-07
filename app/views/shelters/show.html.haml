@@ -3,54 +3,55 @@
   = javascript_include_tag "shelter"
   %script{src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyB21xESS5tCZO5TLxjnLHFz7uQCBiq0fjw"}
 
-
-%h1.big-name #{@shelter.name}
-- unless @shelter.phone.nil?
-  %a{href: "tel:#{@shelter.phone}"}#{@shelter.phone}
-- unless @shelter.website.nil?
-  %a{href: "#{@shelter.website}"}#{@shelter.website}
-
-.reviews
-  #rating.rating{data: {rating: @shelter.rating}}
-  %button#rate Add your rating
-  %a.flag{href: "#report"} Report a problem
-%p #{@shelter.description}
-
-- unless @shelter.need_to_know.nil?
-  %blockquote#need-to-know
-    %h1 Need to know:
-    #{@shelter.need_to_know}
-
-#service-list.features
-  %h1 Services
-  %ul.feature-list
-    - @shelter.services.each do |s|
-      %li #{s}
-
-#filter-list.features
-  %h1 Features
-  %ul.feature-list
-    - @shelter.filters.each do |f|
-      %li #{f}
-
+/ MAP
 - location = @shelter.location
 - center = {}
 - unless location.nil?
   - center[:lat] = location.latlon[0]
   - center[:lon] = location.latlon[1]
 
-#shelter-map{data: {center: center}}
-- unless location.nil?
-  %address #{location.street}, #{location.state}, #{location.city}
+#shelter-map.map{data: {center: center}}
+/ END OF MAP
 
-%ul#testimonials.small-list
-  - @shelter.sorted_testimonials.each do |t|
-    %li.list-item
-      %blockquote.testimonial
-        = t[:comment]
-        %footer
-          %cite= t[:author_name]
-          %i= t[:created_at].strftime(" on %m/%d/%y")
+/ GRID
+.grid-container
+  %p.full-content #{@shelter.description}
+
+  .shelter-content
+    #rating{data: {rating: @shelter.rating}}
+    %button#rate.main-button Add your rating
+    
+    - unless @shelter.need_to_know.nil?
+      %blockquote#need-to-know
+        %h1 Need to know:
+        #{@shelter.need_to_know}
+
+  .shelter-content
+    %button What to bring
+    %button What to know
+    #service-list.features
+      %h1 Services
+      %ul.feature-list
+        - @shelter.services.each do |s|
+          %li #{s}
+
+    #filter-list.features
+      %h1 Features
+      %ul.feature-list
+        - @shelter.filters.each do |f|
+          %li #{f}
+
+  .full-content
+    %h1 What youth say
+    %ul#testimonials.small-list
+      - @shelter.sorted_testimonials.each do |t|
+        %li.testimonial-item.list-item
+          %img.testimonial.thumbnail{src: "#{t[:thumbnail]}"}
+          %blockquote.testimonial
+            = t[:comment]
+            %footer
+              %cite= t[:author_name]
+              %i= t[:created_at].strftime(" on %m/%d/%y")
 
 %script#template-modal-testimonial{type: :ractive}
   %section
@@ -63,3 +64,13 @@
       %textarea#testimonial-comment.form-control{name: "comment", rows: "5", columns: "40", placeholder: "How was your experience at the #{@shelter.name}?"}
     %button.dismiss{"on-tap" => "close"} Cancel
     %button{"on-tap" => "submit"} Submit
+
+%script#template-map-tooltip{type: "text/template"}
+  %h1 #{@shelter.name}
+  - unless @shelter.location.nil? || @shelter.location.street.nil?
+    %address #{@shelter.location.street}
+  - unless @shelter.phone.nil?
+    %a{href: "tel:#{@shelter.phone}"} #{@shelter.phone}
+  - unless @shelter.website.nil? 
+    %a{href: "#{@shelter.website}"} #{@shelter.website}
+  

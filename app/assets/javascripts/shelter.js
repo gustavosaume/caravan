@@ -43,8 +43,12 @@ $(document).ready(function() {
       position: shelterLocation,
       map: map,
     });
-  }
 
+    var infowindow = new google.maps.InfoWindow({
+      content: $("#template-map-tooltip").html()
+    });
+    infowindow.open(map, marker);
+  }
 
   var rating = new StarRating({
     el: "#rating",

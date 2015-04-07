@@ -4,10 +4,6 @@
 @import "susy";
 @import "variables";
 
-.header {
-  position: absolute;
-  z-index: 1024;
-}
 
 .toolbar {
   background-color: black;
@@ -95,11 +91,6 @@ blockquote {
     color: $blue-color;
     font-weight: bold;
   }
-}
-
-#shelter-list-map {
-  width: 100%;
-  height: 400px;
 }
 
 #bottom-photo {

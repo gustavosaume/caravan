@@ -7,7 +7,7 @@
     coordinates: [40.810804,-73.952215]
   description: "The Mission of the Ali Forney Center is to help homeless Lesbian, Gay, Bisexual, Transgender and Questioning youth be safe and become independent as they move from adolescence to adulthood."
   phone: (212) 206 0574
-  website: aliforneycenter.org
+  website: http://aliforneycenter.org
   max_beds: 
   neet_to_know: "At the Drop-in Center, you will complete an Intake and then be connected to your own case manager who will help you with any services you need."
   services: 
@@ -26,7 +26,7 @@
   rating: 5
   description: "Girls Educational & Mentoring Services (GEMS) is specifically designed to serve girls and young women who have experienced commercial sexual exploitation and domestic trafficking."
   phone: (212) 926 8089 
-  website: gems-girls.org
+  website: http://gems-girls.org
   max_beds: 
   need_to_know: You will need to be referred in order to be considered for housing.
   services: 
