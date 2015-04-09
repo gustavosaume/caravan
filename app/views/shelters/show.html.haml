@@ -19,7 +19,7 @@
 
   .shelter-content
     #rating{data: {rating: @shelter.rating, title: "Overall rating"}}
-    %button#rate.main-button.full-button Add your rating
+    %button#rate.main-button.full-button.trackable Add your rating
     
     - unless @shelter.need_to_know.nil?
       %blockquote#need-to-know
@@ -27,8 +27,8 @@
         #{@shelter.need_to_know}
 
   .shelter-content
-    %button.secondary-button.half-button What to bring
-    %button.tertiary-button.half-button What to know
+    %button.secondary-button.half-button.coming-soon.trackable What to bring
+    %button.tertiary-button.half-button.coming-soon.trackable What to know
     #service-list.features
       %h1 Services
       %ul.feature-list

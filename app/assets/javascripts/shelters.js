@@ -1,4 +1,5 @@
 //= require components
+//= require global-events
 
 $(document).ready(function () {
 

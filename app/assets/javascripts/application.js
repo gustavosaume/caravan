@@ -18,3 +18,5 @@
 //= require ractive
 //= require ractive-events-tap
 //= require ractive-transitions-fade
+
+//= require global-events

@@ -1,4 +1,5 @@
 //= require components
+//= require global-events
 
 $(document).ready(function() {
   var lat = $("#shelter-map").data("center-lat");
@@ -60,7 +61,7 @@ $(document).ready(function() {
     }
   });
 
-  $('#rate').click(function() {
+  $("#rate").click(function() {
     var modal = new ModalView({
       partials: {
         modalContent: $('#template-modal-testimonial').html()

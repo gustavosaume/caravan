@@ -38,8 +38,8 @@
     %a{href: '/shelters/{{id}}'}
       %img.shelter-logo{src: '{{thumbnail}}', alt: '{{name}}'}
     %starRating{id: '{{id}}', rating: '{{rating}}', isEnabled: 'false'}
-    %a.action-link.first{href: '/shelters/{{id}}'} More
-    %a.action-link.last{href: '/shelters/{{id}}#rate'} Rate it!
+    %a.action-link.first.trackable{href: '/shelters/{{id}}'} More
+    %a.action-link.last.trackable{href: '/shelters/{{id}}#rate'} Rate it!
     %blockquote.testimonial
       %img{src: '{{latest_testimonial.thumbnail}}'}
       %cite {{latest_testimonial.author_name}}
