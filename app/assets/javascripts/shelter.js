@@ -55,6 +55,7 @@ $(document).ready(function() {
     data: {
       id: "first",
       rating: $("#rating").data("rating"),
+      title: $("#rating").data("title"),
       isEnabled: false,
     }
   });

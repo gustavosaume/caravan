@@ -18,8 +18,8 @@
   %p.full-content #{@shelter.description}
 
   .shelter-content
-    #rating{data: {rating: @shelter.rating}}
-    %button#rate.main-button Add your rating
+    #rating{data: {rating: @shelter.rating, title: "Overall rating"}}
+    %button#rate.main-button.full-button Add your rating
     
     - unless @shelter.need_to_know.nil?
       %blockquote#need-to-know

@@ -28,6 +28,7 @@
 .rating { 
   border: none;
   float: left;
+  display: inline-block;
 }
 
 .rating > input { display: none; } 
@@ -48,6 +49,14 @@
   color: #ddd; 
   float: right; 
 }
+
+.rating-title {
+  float: left;
+  
+  @include typeSize(medium);
+}
+
+
 
 /***** CSS Magic to Highlight Stars on Hover *****/
 

@@ -1,5 +1,6 @@
 // RATING COMPONENT
 var template = '<fieldset class="rating rating-{{id}}">' +
+  '<h1 class="rating-title">{{title}}</h1>' +
   '<input type="radio" id="star5-{{id}}" name="rating{{id}}" value="5"       {{rating >= 5                   ? \'checked="checked"\' : \'\'}}/><label class = "full" for="star5-{{id}}" title="Awesome - 5 stars"></label>' +
   '<input type="radio" id="star4half-{{id}}" name="rating{{id}}" value="4.5" {{rating < 5   && rating >= 4.5 ? \'checked="checked"\' : \'\'}}/><label class="half" for="star4half-{{id}}" title="Pretty good - 4.5 stars"></label>' +
   '<input type="radio" id="star4-{{id}}" name="rating{{id}}" value="4"       {{rating < 4.5 && rating >= 4   ? \'checked="checked"\' : \'\'}}/><label class = "full" for="star4-{{id}}" title="Pretty good - 4 stars"></label>' +
@@ -21,6 +22,7 @@ var StarRating = Ractive.extend({
   },
   data: {
     id: "",
+    title: "",
     rating: 0,
     isEnabled: true
   }
