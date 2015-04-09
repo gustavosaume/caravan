@@ -35,35 +35,6 @@
   background-color: ghostwhite;
 }
 
-address {
-  text-align: center;
-}
-
-.rating {
-  display: block;
-  text-align: right;
-  float: none;
-}
-
-.full-button {
-  width: 100%;
-  height: 50px;
-  display: block;
-  margin: 10px;
-  
-  border: none;
-  background-color: black;
-  
-  color: $contrast-font-color;
-  
-  @include typeSize(medium);
-
-  > em {
-    font-style: italic;
-    @include typeSize(small);
-  }
-}
-
 .testimonial-item {
   background: $teal-color;
   color: $contrast-font-color;

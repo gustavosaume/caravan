@@ -68,6 +68,15 @@ $(document).ready(function () {
         map: map,
       });
       bounds.extend(latLng);
+
+      var infowindow = new google.maps.InfoWindow({
+        content: $("#template-map-tooltip-" + shelter.id).html()
+      });
+
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.open(map, marker);
+        map.setCenter(marker.position);
+      });
     }
   });
   map.fitBounds(bounds);

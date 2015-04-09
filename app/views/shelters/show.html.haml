@@ -74,3 +74,4 @@
   - unless @shelter.website.nil? 
     %a{href: "#{@shelter.website}"} #{@shelter.website}
   
+= render partial: "partials/map_tooltip", locals: { shelters: [@shelter] }

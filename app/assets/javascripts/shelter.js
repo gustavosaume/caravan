@@ -45,7 +45,7 @@ $(document).ready(function() {
     });
 
     var infowindow = new google.maps.InfoWindow({
-      content: $("#template-map-tooltip").html()
+      content: $("script[id^='template-map-tooltip']").html()
     });
     infowindow.open(map, marker);
   }
