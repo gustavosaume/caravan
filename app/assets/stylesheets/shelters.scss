@@ -47,6 +47,10 @@
   &:hover {
     background-color: $button-over-color;
   }
+
+  &:visited {
+    color: white;
+  }
 }
 
 .action-link.first,

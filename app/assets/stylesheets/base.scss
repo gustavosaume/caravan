@@ -21,13 +21,22 @@ blockquote {
 .button {
   display: inline-block;
   margin-top: 10px; 
+  border: none;
+
+  cursor: pointer;
+
+  @include typeSize(base);
+
+  &:visited {
+    color: $contrast-font-color;
+  }
 }
 
 .main-button {
   @extend .button;
 
   color: $contrast-font-color;
-  background-color: black;
+  background-color: $accent-color;
 }
 
 .full-button {
@@ -39,10 +48,28 @@ blockquote {
   padding: 10px;
 }
 
+.half-button {
+  @include span(3 of 6);
+}
+
 .big-button {
   @extend .button;
 
   @include typeSize(large);
+}
+
+.secondary-button {
+  @extend .button;
+
+  color: $white-color;
+  background-color: $button-secondary-color;
+}
+
+.tertiary-button {
+  @extend .button;
+
+  color: $white-color;
+  background-color: $button-tertiary-color;
 }
 
 .grid-container {
