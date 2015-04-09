@@ -5,6 +5,17 @@
 
 
 #shelter-list-map.map
+.info-banner
+  %ul.info-icons
+    %li
+      = image_tag "find-logo.svg"
+      %h1 FIND SHELTER
+    %li
+      = image_tag "rate-logo.svg"
+      %h1 RATE SHELTERS
+    %li
+      = image_tag "share-logo.svg"
+      %h1 SHARE TIPS & TRICKS
 #shelter-list-container.grid-container{data: {shelters: @shelters.map(&:to_hash).to_json}}
 
 / #shelter-list-filter
