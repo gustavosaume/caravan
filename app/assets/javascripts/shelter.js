@@ -1,7 +1,44 @@
 //= require components
 //= require global-events
 
+function showTestimonialModal() {
+  var modal = new ModalView({
+    partials: {
+      modalContent: $('#template-modal-testimonial').html()
+    }
+  });
+
+  modal.on('submit', function() {
+    var url = window.location.pathname + '/testimonials';
+    var data = {};
+    $("#testimonial-form")
+      .serializeArray()
+      .filter(function(element) {
+        return element.value.length > 0;
+      })
+      .forEach(function(element) {
+        data[element.name] = element.value;
+      });
+
+    if (data.comment !== undefined) {
+      $.post(url, {"testimonial": data}).done(function() {
+        document.location.reload(true);
+      }).fail(function() {
+        console.log("FAILURE");
+      });
+    }
+    else {
+      window.alert("You need to add a testimonial first!");
+    }
+  });
+}
+
+
 $(document).ready(function() {
+  if (window.location.hash == "#rate") {
+    showTestimonialModal();
+  }
+
   var lat = $("#shelter-map").data("center-lat");
   var lon = $("#shelter-map").data("center-lon");
   var shelterLocation;
@@ -61,35 +98,6 @@ $(document).ready(function() {
     }
   });
 
-  $("#rate").click(function() {
-    var modal = new ModalView({
-      partials: {
-        modalContent: $('#template-modal-testimonial').html()
-      }
-    });
+  $("#rate").on("click", showTestimonialModal);
 
-    modal.on('submit', function() {
-      var url = window.location.pathname + '/testimonials';
-      var data = {};
-      $("#testimonial-form")
-        .serializeArray()
-        .filter(function(element) {
-          return element.value.length > 0;
-        })
-        .forEach(function(element) {
-          data[element.name] = element.value;
-        });
-
-      if (data.comment !== undefined) {
-        $.post(url, {"testimonial": data}).done(function() {
-          document.location.reload(true);
-        }).fail(function() {
-          console.log("FAILURE");
-        });
-      }
-      else {
-        window.alert("You need to add a testimonial first!");
-      }
-    });
-  });
 });
