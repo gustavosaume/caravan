@@ -105,16 +105,22 @@ blockquote {
 }
 
 .info-banner {
-  width: 100%;
+  padding: 20px;
+  margin: auto;
+  text-align: center;
+  display: block;
+
   background-color: $orange-color;
   color: $white-color;
 }
 
+.info-banner.medium {
+  width: auto;
+  text-align: center;
+}
+
 .info-icons {
   @include inline-block-list(20px);
-
-  text-align: center;
-  padding: 20px;
 }
 
 .info-icons img {
