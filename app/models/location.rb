@@ -1,9 +1,11 @@
 class Location
   include Mongoid::Document
 
-  field :street, type: String
-  field :city,   type: String
-  field :state,  type: String
+  field :street,         type: String
+  field :street_ref,     type: String
+  field :city,           type: String
+  field :state,          type: String
+  field :public_transit, type: String
   field :lonlat, type: Array
 
 
@@ -15,7 +17,6 @@ class Location
 
 
 
-
   # Methods
   #########################################################
 
@@ -24,11 +25,16 @@ class Location
   end
 
   def to_hash
-    {
+    hash = {
       street: self.street,
-      citi: self.city,
+      city: self.city,
       state: self.state,
       latlon: self.latlon
     }
+
+    hash[:street_ref] = self.street_ref unless self.street_ref.nil?
+    hash[:public_transit] = self.public_transit unless self.public_transit.nil?
+
+    hash
   end
 end

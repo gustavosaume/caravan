@@ -48,6 +48,7 @@
 .rating > label { 
   color: #ddd; 
   float: right; 
+  margin: -3px auto;
 }
 
 .rating-title {
@@ -80,6 +81,8 @@
   background-color: rgba(0,0,0,0.5);
   padding: 0.5em;
   text-align: center;
+  z-index: 2048;
+  
   @include box-sizing(border-box);
 }
 
@@ -92,11 +95,10 @@
 .modal {
   position: relative;
   background-color: white;
-  padding: 2em;
   box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
   margin: 0 auto;
   display: inline-block;
-  max-width: 100%;
+  max-width: 70%;
   max-height: 100%;
   overflow-y: auto;
   @include box-sizing(border-box);
@@ -116,6 +118,10 @@
   padding: 0.5em 1em;
   display: inline-block;
   cursor: pointer;
+}
+
+.modal-title {
+  margin: 10px;
 }
 
 

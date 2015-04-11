@@ -32,11 +32,13 @@ shelters.each do |json_shelter|
   
     latlon = json_location[:coordinates]
     location = Location.new(
-        street: json_location[:street],
-        city:   json_location[:city],
-        state:  json_location[:state],
+        street:     json_location[:street],
+        city:       json_location[:city],
+        state:      json_location[:state],
         lonlat: latlon.nil? ? nil : latlon.reverse
-      )  
+      )
+    location[:street_ref] = json_location[:street_ref] unless json_location[:street_ref].nil? 
+    location[:public_transit] = json_location[:public_transit] unless json_location[:public_transit].nil? 
     shelter.location = location
   end
   
@@ -50,26 +52,27 @@ end
 puts "#{shelters.count} shelters created."
 puts ""
 
-Shelter.all.each do |shelter|
-  puts "#{shelter.name}: #{shelter.rating}  at #{shelter.location}"
-  puts "  Testimonials:"
-  (0..rand(10)).each do |i|
-    testimonial = Testimonial.create(
-      comment: Faker::Lorem.sentence(1),
-      author_name: Faker::Name.name,
-      shelter: shelter,
-      c_at: Faker::Date.backward(rand(10))
-    )
-    testimonial.save!
-    puts "    #{testimonial.comment}"
+# Shelter.all.each do |shelter|
+#   puts "#{shelter.name}: #{shelter.rating}  at #{shelter.location}"
+#   puts "  Testimonials:"
+#   (0..rand(10)).each do |i|
+#     testimonial = Testimonial.create(
+#       comment: Faker::Lorem.sentence(1),
+#       author_name: Faker::Name.name,
+#       shelter: shelter,
+#       c_at: Faker::Date.backward(rand(10))
+#     )
+#     testimonial.save!
+#     puts "    #{testimonial.comment}"
 
-  end
-end
+#   end
+# end
 
-Shelter.find_by(name: "Ali Forney Center") do |s|
+Shelter.find_by(name: "Ali Forney Center (Harlem Drop-in Center)") do |s|
   testimonial = Testimonial.create(
-      comment: "It's strictly LGBT youth. Its a great environment. The staff’s LGBT, everybody understands where you’re coming from, some have had their own struggles & periods of homelessness, so its a great way to relate to people, see where they are to see where you can actually go, if not further.",
-      author_name: "George",
+      compliment: "Its a great environment. The staff’s LGBT, everybody understands where you’re coming from, some have had their own struggles & periods of homelessness, so its a great way to relate to people, see where they are to see where you can actually go, if not further.",
+      tips: "It's strictly LGBT youth",
+      author_name: "GEORGE",
       shelter: s,
       thumbnail: "/images/testimonials/george.jpg"
     )
@@ -78,7 +81,7 @@ end
 
 Shelter.find_by(name: "The Door") do |s|
   testimonial = Testimonial.create(
-      comment: "They do a lot of great things. They have after school programs if you just want to get away for a bit they have computer classes, movies, medical attention, trans care and more.",
+      compliment: "They do a lot of great things. They have after school programs if you just want to get away for a bit they have computer classes, movies, medical attention, trans care and more.",
       author_name: "RANASME",
       shelter: s,
       thumbnail: "/images/testimonials/ranasme.jpg"
@@ -88,7 +91,8 @@ end
 
 Shelter.find_by(name: "The Covenant House") do |s|
   testimonial = Testimonial.create(
-      comment: "Being Gay does not influence where I stay. The Covenant House has great resources and job training. Think positively and work hard, that's what matters.",
+      compliment: "Being Gay does not influence where I stay. The Covenant House has great resources and job training.",
+      tips: "Think positively and work hard, that's what matters.",
       author_name: "JOSEPH",
       shelter: s,
       thumbnail: "/images/testimonials/joseph.jpg"

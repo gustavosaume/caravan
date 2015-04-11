@@ -16,6 +16,6 @@ class TestimonialsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def testimonial_params
-      params.require(:testimonial).permit(:comment, :author_name, :shelter_id, :shelter, :rating).merge(shelter: @shelter)
+      params.require(:testimonial).permit(:author_name, :shelter_id, :complaint, :compliment, :tips, :services, :shelter, :rating).merge(shelter: @shelter)
     end
 end

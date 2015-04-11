@@ -1,22 +1,35 @@
-- name: Ali Forney Center
+- name: Ali Forney Center (Harlem Drop-in Center)
   rating: 5
   location:
-    street: 224 West 35th Street
+    street: 321 W. 125th Street
+    public_transit: A/C/B/D train to 125th Street
     city: New York
     state: NY
     coordinates: [40.810804,-73.952215]
-  description: "The Mission of the Ali Forney Center is to help homeless Lesbian, Gay, Bisexual, Transgender and Questioning youth be safe and become independent as they move from adolescence to adulthood."
+  description: "AFC is the nation's largest and most comprehensive organization dedicated to homeless LGBTQ youth. Our goal is to provide homeless LGBTQ youths, aged 16-24, with the support and services they need to escape the streets and begin to live healthy and independent lives."
   phone: (212) 206 0574
   website: http://aliforneycenter.org
   max_beds: 
-  neet_to_know: "At the Drop-in Center, you will complete an Intake and then be connected to your own case manager who will help you with any services you need."
+  neet_to_know: "At the Drop-in Center, you will complete an Intake and then be connected to your own case manager who will help you with any services you need. Open for new Intakes: Monday-Friday from 8am-8pm and Saturday and Sunday from 10am-6pm. (Closed to clients on Wednesdays from 12pm-4pm for staff meetings.) Want to get a bed? Get more information on how to get a bed in the transitional housing program through AFC case manager"
+  hours: "Drop-In Center is the nation’s first 24-hour drop-in program for homeless LGBTQ youth"
   services: 
-    - drop-in center
-    - meals
-    - showers
-    - free HIV tests
-    - support group & therapy
-    - transitional housing
+    - Drop-In Center
+    - Job Training
+    - Referral to Other services
+    - Mental health services
+    - Medical Attention/Health Clinic/HIV support
+    - Hot meal
+    - Shower
+    - Clothing
+    - Case Management
+    - Recreational Activities
+    - Workshops
+    - Counselling/Group Therapy
+    - Street or mobile outreach
+    - Emergency Housing
+    - Transitional Housing
+    - Job training/Learning, Education, Advancement and Placement (LEAP)
+    - Other
   filters:
     - LGBTQ friendly
     - referral to housing needed
@@ -24,17 +37,35 @@
 
 - name: The Door
   rating: 5
-  description: "Girls Educational & Mentoring Services (GEMS) is specifically designed to serve girls and young women who have experienced commercial sexual exploitation and domestic trafficking."
-  phone: (212) 926 8089 
-  website: http://gems-girls.org
+  location:
+    street: 555 Broome St
+    street_ref: between Varick and Avenue of the Americas (6th Avenue)
+    public_transit: C/E to Spring Street, A/C/E to Canal Street or 1 to Canal Street, or by taking the M21 bus to Varick and Canal
+    city: New York
+    state: NY
+    coordinates: [40.72433,-74.005463]
+  description: "The Door’s mission is to empower young people to reach their potential by providing comprehensive youth development services in a diverse and caring environment."
+  phone: (212) 941-9090
+  website: http://www.door.org
   max_beds: 
   need_to_know: You will need to be referred in order to be considered for housing.
+  hours: "General programming  2:00 – 8:00 p.m, extended hours until 10:00 p.m. on Weds. Health, mental health and legal appointments - as well as HSE and other Career & Education classes - take place earlier in the day. Specific drop-in hours for runaway and homeless youth: 11am M-F, and 12-6pm on Saturdays."
   services: 
-    - transitional housing
-    - survivor support and training
-    - youth Development & leadership
-    - educational initiatives
-    - short term crisis care
+    - College Advisement & Tutoring
+    - Counseling
+    - Creative Arts
+    - English Language (ESOL)
+    - Food & Nutrition Services
+    - Foster Care
+    - HSE (High School Equivalency)
+    - Health & Dental Services
+    - Jobs and Internships
+    - Leadership
+    - Legal & Immigration Services
+    - LGBTQ
+    - Runaway and Homeless Youth
+    - Sexual Health & Birth Control
+    - Supportive Housing
   filters:
     - court advocacy
     - short term crisis care
@@ -55,15 +86,18 @@
   max_beds: 100
   need_to_know: "Beds can be hard to get. Call before you go, or show up early and often."
   services: 
-    - crisis care
-    - food
-    - hot meals
-    - mental health
-    - counselling
-    - job training
-    - job assistance
-    - health services
-    - case management
+    - Outreach Vans
+    - Medical Attention/Health Clinic
+    - Bed/Place to sleep
+    - Meals/Food
+    - Counselling
+    - Legal Help
+    - Mother/Child Program
+    - Case Management
+    - Rights Of Passage
+    - Financial Help
+    - Job Training
+    - Pastoral Ministry
   filters:
     - LGBT friendly
   thumbnail: /images/shelters/covenant_house.gif

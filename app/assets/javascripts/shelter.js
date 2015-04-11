@@ -11,7 +11,7 @@ function showTestimonialModal() {
   modal.on('submit', function() {
     var url = window.location.pathname + '/testimonials';
     var data = {};
-    $("#testimonial-form")
+    $("#testimonial-form .form-control, #testimonial-form input:radio")
       .serializeArray()
       .filter(function(element) {
         return element.value.length > 0;
@@ -20,7 +20,22 @@ function showTestimonialModal() {
         data[element.name] = element.value;
       });
 
-    if (data.comment !== undefined) {
+    var services = $("#testimonial-form input:checkbox")
+      .serializeArray()
+      .map(function(element) {
+        return element.value;
+      });
+
+    var otherServices = $("#other-service").val();
+    if (otherServices) {
+      services.push(otherServices);
+    }
+
+    if (services.length > 0) {
+      data["services"] = services;
+    }
+
+    if (!$.isEmptyObject(data)) {
       $.post(url, {"testimonial": data}).done(function() {
         document.location.reload(true);
       }).fail(function() {

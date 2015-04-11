@@ -55,7 +55,7 @@
     %blockquote.testimonial
       %img{src: '{{latest_testimonial.thumbnail}}'}
       %cite {{latest_testimonial.author_name}}
-      %p {{latest_testimonial.comment}}
+      %p {{& latest_testimonial.comment}}
   {{/partial}}
 
 #bottom-photo.bottom.big

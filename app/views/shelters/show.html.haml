@@ -48,22 +48,44 @@
         %li.testimonial-item.list-item
           %img.testimonial.thumbnail{src: "#{t[:thumbnail]}"}
           %blockquote.testimonial
-            = t[:comment]
+            %p
+              != t.comment
             %footer
               %cite= t[:author_name]
               %i= t[:created_at].strftime(" on %m/%d/%y")
 
 %script#template-modal-testimonial{type: :ractive}
   %section
-    %h1 Submit your testimonial
+    %h1.modal-title How was #{@shelter.name}?
     %form#testimonial-form.vertical-form{"on-submit" => "submit"}
-      %starRating{id: '{{id}}', name: 'rating'}
-      %label{for: "testimonial-name"} Your name
-      %input#testimonial-name.form-control{type: "text", name: "author_name", placeholder: "(Leave empty for anonymous)"}
-      %label{for: "testimonial-comment"} Testimonial
-      %textarea#testimonial-comment.form-control{name: "comment", rows: "5", columns: "40", placeholder: "How was your experience at the #{@shelter.name}?"}
-    %button.dismiss{"on-tap" => "close"} Cancel
-    %button{"on-tap" => "submit"} Submit
+      %starRating{id: '{{id}}', name: 'rating', title: 'Your overal rating: '}
+      %fieldset
+        %label{for: "testimonial-name"} Your name
+        %input#testimonial-name.form-control{type: "text", name: "author_name", placeholder: "(Leave empty for anonymous)"}
+
+      %fieldset
+        %label What services did you use at #{@shelter.name}?
+        - @shelter.services.each do |s|
+          %label.inline-field.normal
+            = check_box_tag "#{s}", "#{s}"
+            = s
+        %label.inline-field.normal 
+          Other:
+          %input#other-service
+
+
+      %fieldset
+        %label{for: "testimonial-complaint"} Overall, any complaints?
+        %textarea#testimonial-complaint.form-control{name: "complaint", rows: "4", columns: "40", placeholder: "(Dirty bed? Rude staff? Make your mark here! Let other youth know!)"}
+      
+      %fieldset
+        %label{for: "testimonial-compliment"} Overall, any compliments?
+        %textarea#testimonial-compliment.form-control{name: "compliment", rows: "4", columns: "40", placeholder: "(LGBTQ Friendly Environment? How was the staff? Did you get the job training you were looking for? )"}
+
+      %fieldset
+        %label{for: "testimonial-tips"} Anything else others like you should know before they show up?
+        %textarea#testimonial-tips.form-control{name: "tips", rows: "4", placeholder: "What tips, tricks and/or advice can you share about going here? What should others know to bring? Help people like you navigate the system!"}
+    %button.full-button.main-button{"on-tap" => "submit"} Share your testimonial!
 
 %script#template-map-tooltip{type: "text/template"}
   %h1 #{@shelter.name}
