@@ -9,13 +9,14 @@
   %ul.info-icons
     %li
       = image_tag "find-logo.svg"
-      %h1 FIND SHELTER
+      %h1 Find Shelter
     %li
       = image_tag "rate-logo.svg"
-      %h1 RATE SHELTERS
+      %h1 Review Shelter
     %li
       = image_tag "share-logo.svg"
-      %h1 SHARE TIPS & TRICKS
+      %h1 Share With Others
+
 #shelter-list-container.grid-container{data: {shelters: @shelters.map(&:to_hash).to_json}}
 
 %a.action-link.info-banner.medium.trackable{href: ""} Don't see your shelter here? Add yours and rate it here!
