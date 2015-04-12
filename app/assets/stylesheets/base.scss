@@ -83,6 +83,8 @@ textarea, input, button { outline: none; }
 .grid-container {
   @include container(12);
   @include clearfix;
+
+  padding-top: 10px;
 }
 
 .footer {
@@ -199,12 +201,6 @@ form .inline-field {
 
 form .rating {
   float: none;
-}
-
-form .rating-title {
-  @include typeSize(base);
-
-  font-weight: bold;
 }
 
 fieldset {

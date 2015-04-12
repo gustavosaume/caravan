@@ -53,8 +53,9 @@
 
 .rating-title {
   float: left;
+  font-weight: bold;
   
-  @include typeSize(medium);
+  @include typeSize(base);
 }
 
 
@@ -82,7 +83,7 @@
   padding: 0.5em;
   text-align: center;
   z-index: 2048;
-  
+
   @include box-sizing(border-box);
 }
 
