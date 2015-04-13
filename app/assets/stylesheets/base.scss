@@ -220,3 +220,7 @@ fieldset {
 label.normal {
   font-weight: normal;
 }
+
+.map-title {
+  @include typeSize(medium);
+}
