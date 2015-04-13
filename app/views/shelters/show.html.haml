@@ -6,7 +6,7 @@
 / MAP
 - location = @shelter.location
 - center = {}
-- unless location.nil?
+- unless location.nil? || location.latlon.nil?
   - center[:lat] = location.latlon[0]
   - center[:lon] = location.latlon[1]
 
@@ -41,18 +41,19 @@
         - @shelter.filters.each do |f|
           %li #{f}
 
-  .full-content
-    %h1 What youth say
-    %ul#testimonials.small-list
-      - @shelter.sorted_testimonials.each do |t|
-        %li.testimonial-item.list-item
-          %img.testimonial.thumbnail{src: "#{t[:thumbnail]}"}
-          %blockquote.testimonial
-            %p
-              != t.comment
-            %footer
-              %cite= t[:author_name]
-              %i= t[:created_at].strftime(" on %m/%d/%y")
+  - unless @shelter.testimonials.count == 0
+    .full-content
+      %h1 What youth say
+      %ul#testimonials.small-list
+        - @shelter.sorted_testimonials.each do |t|
+          %li.testimonial-item.list-item
+            %img.testimonial.thumbnail{src: "#{t[:thumbnail]}"}
+            %blockquote.testimonial
+              %p
+                != t.comment
+              %footer
+                %cite= t[:author_name]
+                %i= t[:created_at].strftime(" on %m/%d/%y")
 
 %script#template-modal-testimonial{type: :ractive}
   %section.grid-container
