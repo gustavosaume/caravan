@@ -55,15 +55,20 @@
               %i= t[:created_at].strftime(" on %m/%d/%y")
 
 %script#template-modal-testimonial{type: :ractive}
-  %section
+  %section.grid-container
     %h1.modal-title How was #{@shelter.name}?
     %form#testimonial-form.vertical-form{"on-submit" => "submit"}
-      %starRating{id: '{{id}}', name: 'rating', title: 'Your overal rating: '}
-      %fieldset
+      %fieldset.full-field
+        %starRating{id: '{{id}}', name: 'rating', title: 'Your overal rating: '}
+      %fieldset.split-field
         %label{for: "testimonial-name"} Your name
         %input#testimonial-name.form-control{type: "text", name: "author_name", placeholder: "(Leave empty for anonymous)"}
 
-      %fieldset
+      %fieldset.split-field
+        %label{for: "testimonial-email"} Your email address
+        %input#testimonial-email.form-control{type: "email", name: "author_email", placeholder: "We won't share it or abuse it."}
+
+      %fieldset.full-field
         %label What services did you use at #{@shelter.name}?
         - @shelter.services.each do |s|
           %label.inline-field.normal
@@ -74,15 +79,15 @@
           %input#other-service
 
 
-      %fieldset
+      %fieldset.split-field
         %label{for: "testimonial-complaint"} Overall, any complaints?
         %textarea#testimonial-complaint.form-control{name: "complaint", rows: "4", columns: "40", placeholder: "(Dirty bed? Rude staff? Make your mark here! Let other youth know!)"}
       
-      %fieldset
+      %fieldset.split-field
         %label{for: "testimonial-compliment"} Overall, any compliments?
         %textarea#testimonial-compliment.form-control{name: "compliment", rows: "4", columns: "40", placeholder: "(LGBTQ Friendly Environment? How was the staff? Did you get the job training you were looking for? )"}
 
-      %fieldset
+      %fieldset.full-field
         %label{for: "testimonial-tips"} Anything else others like you should know before they show up?
         %textarea#testimonial-tips.form-control{name: "tips", rows: "4", placeholder: "What tips, tricks and/or advice can you share about going here? What should others know to bring? Help people like you navigate the system!"}
     %button.full-button.main-button{"on-tap" => "submit"} Share your testimonial!

@@ -200,6 +200,18 @@ fieldset {
   margin-bottom: 10px;
 }
 
+.split-field {
+  @include span(6 of 12);
+}
+
+.full-field {
+  @include span(12 of 12);
+}
+
+.split-field, .full-field {
+  margin-bottom: 6px;
+}
+
 label.normal {
   font-weight: normal;
 }

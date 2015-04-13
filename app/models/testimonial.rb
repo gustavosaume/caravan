@@ -3,6 +3,8 @@ class Testimonial
   include Mongoid::Timestamps::Created::Short
 
   field :author_name, type: String, default: "anonymous"
+  field :author_email, type: String
+
   field :rating, type: BigDecimal
   field :thumbnail, type: String, default: "/images/testimonials/placeholder.png"
   
