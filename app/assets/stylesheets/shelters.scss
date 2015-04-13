@@ -72,6 +72,10 @@
   }
 }
 
+.action-link.main-action {
+  background-color: $orange-color;
+}
+
 // .rating {
 //   display: block;
 //   float: none;
@@ -111,7 +115,7 @@ blockquote {
   text-align: center;
   display: block;
 
-  background-color: $orange-color;
+  background-color: $blue-color;
   color: $white-color;
 }
 
