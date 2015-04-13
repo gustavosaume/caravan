@@ -104,7 +104,7 @@ textarea, input, button { outline: none; }
 .header {
   display: block;
   height: 110px;
-  background: $teal-color;
+  background: $light-purple-color;
 
   .nav {
     @include horizontal-list;
