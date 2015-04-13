@@ -1,3 +1,104 @@
+- name: Safe Horizon (Streetwork Harlem Drop-In Center)
+  rating: 5
+  location: 
+    street: 209 West 125th Street
+    public_transit: 
+    city: New York
+    state: NY
+    coordinates: [40.6947,-73.961838]
+  description: "Safe Horizon is the nation’s leading victim assistance organization and touches the lives of more than 250,000 affected by crime and abuse each year. Whether we are responding to child abuse, domestic violence, or other violent crimes, we help victims and their families heal and rebuild their lives.."
+  phone: 800.708.6600
+  website: http://safehorizon.org
+  max_beds: 
+  need_to_know: "Intakes are conducted Monday, Tuesday, Thursday, Friday (10 am - 12 pm) Evening groups are also offered."
+  hours: "Monday, Tuesday, Thursday, and Friday (12:00 pm – 5:00 pm)"
+  services: 
+    - Drop-In Center
+    - Kitchen/Food/Meals
+    - Showers
+    - Laundry
+    - Music/Creative Arts
+    - Computer/Internet
+    - Recreational/Wellness activity (i.e yoga, cooking..)
+    - Case management
+    - Help getting identification
+    - Culturally and linguistically services
+    - Shelter and housing referral
+    - Supportive counseling and empowerment group
+    - Links to other services
+    - Help to access public benefits
+    - Free Legal assistance
+    - Workshops
+    - Medical/HIV help
+    - Mental health/Counselling/Group Therapy
+    - Emergency/crisis Housing
+  filters:
+    - LGBTQ friendly
+    - Referral to housing needed
+  thumbnail: /images/shelters/safe_horizon.png
+
+- name: Safe Horizon (Streetwork Lower East Side  )
+  rating: 5
+  location: 
+    street: 33 Essex St
+    public_transit: 
+    city: New York
+    state: NY
+    coordinates: [40.71604,-73.9919598]
+  description: "Safe Horizon is the nation’s leading victim assistance organization and touches the lives of more than 250,000 affected by crime and abuse each year. Whether we are responding to child abuse, domestic violence, or other violent crimes, we help victims and their families heal and rebuild their lives.."
+  phone: 800.708.6600
+  website: http://safehorizon.org
+  max_beds: 
+  need_to_know: "Mondays by appointment only (10 am to 6 pm). Injection drug users only: Mondays, 2 pm - 5 pm. Intakes are conducted: Tuesday, Thursday, Friday, 10 am - 5 pm Extra Services: Evening groups, daily syringe exchange."
+  hours: "General Hours: Tuesday, Thursday, Friday, 1 pm - 5 pm"
+  services: 
+    - Drop-In Center
+    - Food/Meals
+    - Showers
+    - Recreational/Wellness activity (i.e yoga, cooking..)
+    - Music/Creative Arts
+    - Computer/Internet
+    - Case management
+    - Help getting identification
+    - Culturally and linguistically services
+    - Shelter and housing referral
+    - Supportive counseling and empowerment group
+    - Links to other services
+    - Help to access public benefits
+    - Free Legal assistance
+    - Workshops
+    - Medical/HIV help
+    - Mental health/Counselling/Group Therapy
+    - Emergency/crisis Housing
+  filters:
+    - LGBTQ friendly
+    - Referral to housing needed
+  thumbnail: /images/shelters/safe_horizon.png
+
+- name: GEMS (Streetwork Lower East Side )
+  rating: 5
+  location: 
+    street: undisclosed
+    public_transit: 
+    city: New York
+    state: NY
+    coordinates:
+  description: "Girls Educational and Mentoring Services’ (GEMS) mission is to empower girls and young women, ages 12–24, who have experienced commercial sexual exploitation and domestic trafficking to exit the commercial sex industry and develop to their full potential. GEMS is committed to ending commercial sexual exploitation and domestic trafficking of girls and young women by changing individual lives, transforming public perception, and revolutionizing the systems and policies that impact sexually exploited youth."
+  phone: 212.926.8089
+  website: http://www.gems-girls.org/
+  max_beds: 
+  need_to_know: "All housing clients must be referred (http://www.gems-girls.org/about/what-we-do/housing-referral-form)"
+  services: 
+    - Short term/ Crisis care (i.e Referrals, phone calls, immediate interventions.)
+    - Transitional Independent Living Program
+    - Supportive Housing Program (Imani House)
+    - Court Advocacy (Family or Alternative to Incarceration (ATI))
+    - Survivor Leadership
+  filters:
+    - LGBTQ friendly
+    - referral to housing needed
+  thumbnail: /images/shelters/gems.jpg
+
 - name: Ali Forney Center (Harlem Drop-in Center)
   rating: 5
   location:
@@ -29,7 +130,6 @@
     - Emergency Housing
     - Transitional Housing
     - Job training/Learning, Education, Advancement and Placement (LEAP)
-    - Other
   filters:
     - LGBTQ friendly
     - referral to housing needed
@@ -40,7 +140,7 @@
   location:
     street: 555 Broome St
     street_ref: between Varick and Avenue of the Americas (6th Avenue)
-    public_transit: C/E to Spring Street, A/C/E to Canal Street or 1 to Canal Street, or by taking the M21 bus to Varick and Canal
+    public_transit: "C/E to Spring Street, A/C/E to Canal Street or 1 to Canal Street, or by taking the M21 bus to Varick and Canal"
     city: New York
     state: NY
     coordinates: [40.72433,-74.005463]

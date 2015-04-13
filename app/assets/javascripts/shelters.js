@@ -61,7 +61,7 @@ $(document).ready(function () {
   var bounds = new google.maps.LatLngBounds();
   shelters.forEach(function(shelter) {
     var location = shelter.location;
-    if (location) {
+    if (location && location.latlon) {
       var latLng = new google.maps.LatLng(location.latlon[0], location.latlon[1]);
       var marker = new google.maps.Marker({
         animation: google.maps.Animation.DROP,

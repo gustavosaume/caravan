@@ -35,7 +35,7 @@ class Shelter
   #########################################################
 
   def to_hash
-    {
+    hash = {
       id: self.id.to_s,
       name: self.name,
       rating: self.rating,
@@ -49,9 +49,10 @@ class Shelter
       
       services: self.services,
       filters: self.filters,
-
-      latest_testimonial: self.sorted_testimonials.first.to_hash
     }
+
+    hash[:latest_testimonial] = self.sorted_testimonials.first.to_hash unless self.testimonials.nil? || self.testimonials.length == 0
+    hash
   end
 
   def sorted_testimonials
