@@ -8,14 +8,18 @@
 .info-banner
   %ul.info-icons
     %li
-      = image_tag "find-logo.png"
-      %h1 Find Shelter
+      %a.scrollable.trackable{"data-scroll-to-selector" => "#shelter-list-container" }
+        = image_tag "find-logo.png"
+        %h1 Find Shelter
     %li
-      = image_tag "rate-logo.png"
-      %h1 Review Shelter
+      %a.scrollable.trackable{"data-scroll-to-selector" => "#shelter-list-container" }
+        = image_tag "rate-logo.png"
+        %h1 Review Shelter
+
     %li
-      = image_tag "share-logo.png"
-      %h1 Share With Others
+      %a.trackable{href: "https://www.facebook.com/pages/Caravan/1424290484541634", target: "_blank"}
+        = image_tag "share-logo.png"
+        %h1 Share With Others
 
 #shelter-list-container.grid-container{data: {shelters: @shelters.map(&:to_hash).to_json}}
 

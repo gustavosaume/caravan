@@ -127,6 +127,13 @@ blockquote {
   height: 132px;
 }
 
+.info-icons a {
+  text-decoration: none;
+  color: $white-color;
+  cursor: pointer;
+  overflow: auto;
+}
+
 .info-icons h1 {
-  @include typeSize(base);
+  @include typeSize(base);  
 }
