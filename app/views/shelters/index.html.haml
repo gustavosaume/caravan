@@ -8,13 +8,13 @@
 .info-banner
   %ul.info-icons
     %li
-      = image_tag "find-logo.svg"
+      = image_tag "find-logo.png"
       %h1 Find Shelter
     %li
-      = image_tag "rate-logo.svg"
+      = image_tag "rate-logo.png"
       %h1 Review Shelter
     %li
-      = image_tag "share-logo.svg"
+      = image_tag "share-logo.png"
       %h1 Share With Others
 
 #shelter-list-container.grid-container{data: {shelters: @shelters.map(&:to_hash).to_json}}
