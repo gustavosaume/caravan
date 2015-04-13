@@ -71,10 +71,10 @@
       %fieldset.full-field
         %label What services did you use at #{@shelter.name}?
         - @shelter.services.each do |s|
-          %label.inline-field.normal
+          %label.grid-field.normal
             = check_box_tag "#{s}", "#{s}"
             = s
-        %label.inline-field.normal 
+        %label.grid-field.normal 
           Other:
           %input#other-service
 
