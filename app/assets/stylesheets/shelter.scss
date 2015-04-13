@@ -43,9 +43,11 @@
 
 .testimonial.thumbnail {
   float: left;
-  width: 322px;
+  width: 140px;
   max-height: 100%;
+  margin: 6px;
 
+  @include border-radius(50%);
   @include box-sizing(border-box);
 }
 
