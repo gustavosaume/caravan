@@ -78,7 +78,7 @@
   thumbnail: /images/shelters/safe_horizon.png
 
 - name: GEMS
-  branch: (Streetwork Lower East Side)
+  branch:
   rating: 5
   location: 
     street: undisclosed
@@ -103,7 +103,7 @@
   thumbnail: /images/shelters/gems.jpg
 
 - name: Ali Forney Center
-  branch: (Harlem Drop-in Center)
+  branch:
   rating: 5
   location:
     street: 321 W. 125th Street
