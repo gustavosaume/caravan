@@ -33,6 +33,20 @@
   @include gallery(4 of 12);
 }
 
+.shelter-item h1 {
+  @include typeSize(base);
+
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  background-color: rgba($white-color, 0.8);
+}
+
+.shelter-item .image-link {
+  position: relative;
+}
+
 .shelter-logo {
   height: 222px;
   width: 100%;

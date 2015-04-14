@@ -2,6 +2,7 @@ class Shelter
   include Mongoid::Document
 
   field :name, type: String
+  field :branch, type: String
   field :rating, type: Float
   field :description, type: String
   field :phone, type: String
@@ -38,6 +39,7 @@ class Shelter
     hash = {
       id: self.id.to_s,
       name: self.name,
+      branch: self.branch,
       rating: self.rating,
       description: self.description,
       phone: self.phone,

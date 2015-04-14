@@ -15,6 +15,7 @@ shelters.each do |json_shelter|
 
   shelter = Shelter.new(
       name:         json_shelter[:name],
+      branch:       json_shelter[:branch],
       rating:       json_shelter[:rating],
       description:  json_shelter[:description],
       phone:        json_shelter[:phone],
@@ -68,7 +69,7 @@ puts ""
 #   end
 # end
 
-Shelter.find_by(name: "Ali Forney Center (Harlem Drop-in Center)") do |s|
+Shelter.find_by(name: "Ali Forney Center") do |s|
   testimonial = Testimonial.create(
       compliment: "Its a great environment. The staff’s LGBT, everybody understands where you’re coming from, some have had their own struggles & periods of homelessness, so its a great way to relate to people, see where they are to see where you can actually go, if not further.",
       tips: "It's strictly LGBT youth",

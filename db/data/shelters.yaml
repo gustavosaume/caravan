@@ -1,4 +1,5 @@
-- name: Safe Horizon (Streetwork Harlem Drop-In Center)
+- name: Safe Horizon
+  branch: (Streetwork Harlem Drop-In Center)
   rating: 5
   location: 
     street: 209 West 125th Street
@@ -37,7 +38,8 @@
     - Referral to housing needed
   thumbnail: /images/shelters/safe_horizon.png
 
-- name: Safe Horizon (Streetwork Lower East Side  )
+- name: Safe Horizon
+  branch: (Streetwork Lower East Side)
   rating: 5
   location: 
     street: 33 Essex St
@@ -75,7 +77,8 @@
     - Referral to housing needed
   thumbnail: /images/shelters/safe_horizon.png
 
-- name: GEMS (Streetwork Lower East Side )
+- name: GEMS
+  branch: (Streetwork Lower East Side)
   rating: 5
   location: 
     street: undisclosed
@@ -99,7 +102,8 @@
     - referral to housing needed
   thumbnail: /images/shelters/gems.jpg
 
-- name: Ali Forney Center (Harlem Drop-in Center)
+- name: Ali Forney Center
+  branch: (Harlem Drop-in Center)
   rating: 5
   location:
     street: 321 W. 125th Street
